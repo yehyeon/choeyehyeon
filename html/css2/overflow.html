@@ -8,78 +8,74 @@
         * {margin:0; padding:0;}
         ul,ol {list-style:none;}
         a{text-decoration: none; color:#000;}
-        img{vertical-align: top}
+        img{vertical-align:center top}
         .pink{color:pink;}
 
         .wrap{
-        width:900px;
-        height:540px;
-        outline: 1px #F00 solid;
-        margin: 30px auto;
+        width:900px; height:540px; outline: 1px #F00 solid; margin: 30px auto;
         }
+
         .wrap .top{
-        outline: 1px #FFFF00/*노랑*/ solid;
-        height:111px;
-        margin:0 30px 20px;
+        outline: 1px #FFFF00/*노랑*/ solid; height:111px; margin:0 30px 20px;
         }
+
+        header{outline:1px #FFFF00/*노랑*/ solid; margin:0 30px 20px; height:91px; padding-top:20px;}
+            header h1{outline:2px #006400 /*초록색*/ solid; margin:0; float:left;}
+            header div{outline:2px #87CEFA /*하늘색*/ solid; float:right; margin-top:10px;}
+            header .top_Btngroup{clear:right; font-size:11px;}
+
         .wrap .contents{    /*큰본문*/
-        outline: 1px #00f solid;
-        height:380px;
-         margin: 0 30px;
+        outline: 1px #00f solid; height:380px; margin: 0 30px;
         }
+
         .contents .left-contents{
-            outline:1px #87CEFA /*하늘색*/ solid;
-            width:580px;
-            height:100%;
+        outline:1px #87CEFA /*하늘색*/ solid; width:580px; height:100%;
         }
 
         .contents .first-news{
         height:200px;
         }
+
         .contents .first-news strong{    /*본문위글자박스*/
-        font-size:24px;
-        display: block;
-        margin-bottom:10px;
-        outline: 2px #8B4513  /*갈색*/ solid;
+        font-size:24px; display: block; margin-bottom:10px; outline: 2px #8B4513  /*갈색*/ solid;
        }
+
        .contents .first-news span.thumb{  /*본문 첫 사진박스*/
-        width: 270px; height:273px auto;outline: 2px #8B008B /*보라색*/ solid;
-        display: block;
-        float:left;
-        margin-right:15px;
+        width: 270px; height:273px auto;outline: 2px #8B008B /*보라색*/ solid; display: block; float:left; margin-right:15px;
         }
+
        .contents .first-news span.thumb img{   /*사진비율*/
-        width: 100%;
-        height:100%;
+        width: 100%; height:100%;
         }
+
         .contents .first-news li.first span.thumb + span{ /*리스트제목네모*/
         outline:1px #000 solid;
          }
+
         .contents .first-news li.first{ /*리스트제목네모의 비율*/
         margin:0 0 10px 0;
          }
+
        .contents .first-news li{ /*리스트네모*/
-        outline:1px #F00 solid;
-        margin-left:280px;
-        font-size:12px;
+        outline:1px #F00 solid; margin-left:280px; font-size:12px;
         }
 
        .contents .second-news .thumb{  /*본문 두번째 사진박스*/
-        width:90px; height:90px outline: 2px #8B008B /*보라색*/ solid;
-        float:left;  margin-left:30px;
+        width:90px; height:90px outline: 2px #8B008B /*보라색*/ solid; float:left;  margin-left:30px;
         }
+
         .contents .second-news  img{   /* 두번째사진비율*/
-         width: 100%;
-         height:100%;
+         width: 100%; height:100%;
          }
+
         .contents .second-news li{ /*리스트네모*/
-        outline:1px #F00 solid;
         font-size:3px;  float:left;
           }
+
         .contents .second-news .list {
-        outline:3px #000 solid;  width:400px; height:180px;
-        margin-left:157px;
+        outline:3px #000 solid;  width:400px; height:180px; margin-left:157px;
         }
+
         .contents .second-news .list li {
         font-size:15px;
         }
@@ -89,21 +85,34 @@
         margin:0; font-size:16px;  color:#FFF; }
         .right-contents .list2 {width:260px; height:120px; float:right; font-size:10px; outline:2px #006400 /*초록색*/solid; margin-top:-10px; }
 
-
-
-
-
-
-
+        .right-contents .bottom-pic {outline:2px #8B008B /*보라색*/ solid; width:240px; height:140px; float:left; margin-top:30px; margin-left:8px;}
+        .right-contents .bottom-pic li div{width:110px; height:70px; outline:3px #000 solid; margin: 0 auto;}
+        .right-contents .bottom-pic li div img{width:100%; height:100%;}
+        .right-contents .bottom-pic ul span{font-size:8px; margin: 2px 2px; margin:10px 10px;}
+        .right-contents .bottom-pic li {width:120px; float:left;} /*사진 옆으로 보내기 위해*/
 
     </style>
     </head>
+
     <body>
         <div class="wrap">
-        <header class="top"></header>
-        <section class="contents">
+            <header class="top">
+                <h1><a href="#"><img src="http://static.naver.net/newsstand/up/2013/0813/nsd114836462.gif" alt="전자신문" /></a></h1>
+                    <div>
+                <a href=""><img src="http://adcreative.naver.com/ad3/1004/1004874/468_60_01484642590306.jpg" alt="바이엔기부 당신의소비에 기부를 더 합니다."></a>
+                    </div>
+
+        <div class="top_Btngroup">
+            <button>구독하기</button>
+            <button>이용자한마디</button>
+            <button>소셜보내기</button>
+            <span>01-23 10:21편집</span>
+        </div>
+            </header>
+
+        <div class="contents">
         <div class="left-contents">
-            <article class="first-news">
+            <div class="first-news">
                 <ul>
                     <li class="first">
                         <a href="">
@@ -115,8 +124,8 @@
                     <li><a href="">[이슈분석] 삼성전자 "갤럭시S8 혁신으로 세계 스마트폰 1</a></li>
                     <li><a href="">[이슈분석] 삼성전자 "갤럭시S8 혁신으로 세계 스마트폰 1</a></li>
                 </ul>
-            </article>
-            <article class="second-news">
+            </div>
+            <div class="second-news">
                 <div class="thumb">
                     <ul>
                         <li><img src="http://static.naver.net/newsstand/2017/0124/etnews/091348/002.jpg" alt=""></li>
@@ -138,10 +147,10 @@
                         <li>'일렉트로마트' SSG닷컴 상륙...신세계, 온라인 가</li>
                     </ul>
                 </div>
-            </article>
+            </div>
         </div>
 
-        <article class="right-contents">
+        <div class="right-contents">
             <div class="issue">
                 <p>이슈분석</p>
             </div>
@@ -159,32 +168,20 @@
                 </ul>
             </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            <div class="bottom-pic">
+                <ul>
+                    <li>
+                        <div><img src="http://static.naver.net/newsstand/2017/0125/ZDNetKorea/101650/008.jpg" alt=""></div>
+                        <span><a href="">1갤노트7, 20만대 실험…원인은 결국"</a></span>
+                    </li>
+                    <li>
+                        <div><img src="http://static.naver.net/newsstand/2017/0125/ZDNetKorea/104957/010.jpg" alt=""></div>
+                        <span><a href="">삼성전자, 갤노트7 발화 원인 23일"</a></span>
+                    </li>
+                </ul>
+            </div>
         </div>
-        </section>
+    </div>
         </div>
-
-
-
-
-
-
-
-
-
-
     </body>
 </html>

@@ -14,16 +14,16 @@
         margin: 0 auto;
         padding:0 25px;
         background-image:url(http://static.naver.net/newsstand/img/20121231/bg_panel.png)
-          }
+         }
         img{vertical-align: top} /*여백사라짐*/
         ul{margin:0; padding:0; list-style:none;}
         .pink{color:pink;}
 
         header{outline:1px #FFFF00/*노랑*/ solid; margin:0 30px 20px; height:91px; padding-top:20px;}
             header h1{outline:2px #006400 /*초록색*/ solid; margin:0; float:left;}
-            header article{outline:2px #87CEFA /*하늘색*/ solid; float:right; margin-top:10px;}
+            header div{outline:2px #87CEFA /*하늘색*/ solid; float:right; margin-top:10px;}
             header .top_Btngroup{clear:right; font-size:11px;}
-        section{height:360px; outline:2px #CCC solid; margin: 0 30px;}
+        section{height:360px; outline:3px #CCC solid; margin: 0 30px;}
 
 
 
@@ -42,28 +42,28 @@
           .left-contents .secount .list li{height:20px; white-space:nowrap;/*한줄로 표시되게*/
            overflow:hidden;/*밖에 나온 영역 숨기기*/ text-overflow:ellipsis;/*글씨가 ..*/ }
 
-        .right-contents{outline:1px #F00 solid; height:100%; margin-left:533px; background-color:#CCC;}
-        .right-contents .grid_list ul{outline:1px #F00 solid; width:110%;} /*맨 위 옆줄*/
+        .right-contents{outline:2px #000 solid; height:100%; margin-left:533px; background-color:#CCC;}
+        .right-contents .grid_list ul{outline:1px #F00 solid; width:110%;} /*사진 위 옆줄*/
         .right-contents .grid_list li{width:146px; height:126px; outline:1px #F00 solid; font-size:11px; float:left; margin-right:10px;}
         /*네모한칸사이즈*/
         .right-contents .grid_list li img{width:100%;} /*사진들어가는비율*/
 
-        .right-contents .news ul{list-style:disc; list-style-position:inside;}
-        .issue li {font-size:12px;  margin-bottom:10px; }
+    .right-contents .news ul{list-style:disc; list-style-position:inside;/*리스트점을안쪽으로넣음*/}
+        .issue li {margin-bottom:10px; }
         .issue li a{text-decoration:none; font-size:12px;}
         h3{margin:0 font-size:16px; background-color: #000; color:#FFF; padding:5px 5px;}
 
         </style>
     </head>
-
+>
     <body>
     <div class="wrap">
     <header>
         <h1><a href="#"><img src="http://static.naver.net/newsstand/up/2013/0813/nsd114836462.gif" alt="전자신문" /></a></h1>
 
-        <article>
+        <div>
         <a href=""><img src="http://adcreative.naver.com/ad3/1004/1004874/468_60_01484642590306.jpg" alt="바이엔기부 당신의소비에 기부를 더 합니다."></a>
-        </article>
+        </div>
 
         <div class="top_Btngroup">
             <button>구독하기</button>
