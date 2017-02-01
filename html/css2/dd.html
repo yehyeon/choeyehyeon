@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+/*안되는거*/
+    /*
+
+    .wrap li:hover ul{display:block;}  ul에  디스플레이 논으로 저장하기
+    .wrap li ul{height:0;overflow:hidden; transition:1s;}  */ 
+    .wrap ul ul{display:none;}
+    .wrap li:hover ul{display:block;}
+
+    </style>
+</head>
+<body>
+
+        <p><q>안녕하세요</q></p>
+
+        <span class="name">김민철</span>
+
+
+        <div class="wrap title">
+            <h2 id="title">title</h2>
+            <ul>
+                <li><a href="#">text</a>
+                    <ul>
+                        <li><a href="">text</a></li>
+                        <li><a href="">text</a></li>
+                        <li><a href="">text</a></li>
+                        <li><a href="">text</a></li>
+                    </ul>
+                </li>
+                <li  class="target"><a href="">text</a>
+                    <ul>
+                        <li><a href=""><input type="text"></a></li>
+                        <li><a href=""><input type="button" value="확인"></a></li>
+                        <li><a href=""><input type="checkbox"></a></li>
+                        <li><a href="">text</a></li>
+                    </ul>
+                </li>
+               <li  class="target"><a href="">text</a>
+                    <ul>
+                        <li><a href=""><img src="" alt="파일pdf"></a></li>
+                        <li><a href=""><img src="" alt="파일hwp"></a></li>
+                        <li><a href=""><img src="" alt="파일html"></a></li>
+                        <li><a href=""><img src="" alt="파일psd"></a></li>
+                        <li><a href=""><img src="" alt="파일psd"></a></li>
+                        <li><a href=""><img src="" alt="파일psd"></a></li>
+                    </ul>
+                </li>
+
+
+<!-- ul>li*6>a>img -->
+            </ul>
+        </div>
+        <div>
+            <input type="button" name="" value="확인"/>
+        </div>
+
+
+</body>
+</html>

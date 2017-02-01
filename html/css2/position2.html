@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>position</title>
+    <style>
+
+       [class^="box"]{border:1px #F00 solid; position:absolute; width:300px; height:300px;}
+       .box1{background: #F00; left:100px; top:100px;}
+       .box2{background: #FF0; left:150px; top:150px; z-index:2;} /*z-index 를 이용하면 더 위에 배치시키거나 더 아래에 배치시킬 수 있다. 2가 우선순위*/
+       .box3{background: #F0F; left:200px; top:200px; z-index:1;}
+       .box4{background: #0FF; left:250px; top:250px;}
+
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+
+</body>
+</html>
