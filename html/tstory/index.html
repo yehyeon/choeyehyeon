@@ -109,7 +109,7 @@
                      <span class="image"><img src="[##_rp_rep_logo_##]" alt="[##_rp_rep_name_##] 님의 사진입니다."></span>
                       <span class="name">[##_rp_rep_name_##]</span>
                       <span class="date"> [##_rp_rep_date_##]</span>
-                      <span class="control">
+                      <span class="control2">
                         <a href="[##_rp_rep_link_##]" class="address">&nbsp;<span>댓글주소</span> </a>
                         <a href="#" onclick="[##_rp_rep_onclick_delete_##]" class="modify">&nbsp;<span>수정/삭제</span></a>
                       </span>
@@ -148,7 +148,7 @@
               <label for="secret"> 비밀글 </label>
             </p>
             </s_rp_member>
-            <p>
+            <p class="textwrap">
               <textarea name="[##_rp_input_comment_##]" rows="10" cols="50" placeholder="댓글을부탁드립니다."></textarea>
             </p>
             <p>
@@ -159,22 +159,44 @@
         </div>
         </s_rp>
 
+    </div><!-- entry close -->
+    </s_article_rep>
+    <div class="entry">
+    <s_paging>
+      <div class="paging">
+          <a [##_prev_page_##] class="[##_no_more_prev_##]">&lt;</a>
+          <span class="numbox">
+            <s_paging_rep>
+            <a [##_paging_rep_link_##] class="num">[##_paging_rep_link_num_##]</a>
+            </s_paging_rep>
+          </span>
+        <a [##_next_page_##] class="[##_no_more_next_##]">&gt;</a>
+      </div>
+    </s_paging>
+    </div>
 
+  </div> <!-- content close -->
 
+  <div id="sidebar">
+      <s_sidebar_element>
+      <!-- 블로그 정보 -->
+        <div class="blogImage">
+        <div class="blogImage"><img src="[##_image_##]" alt="" /></div>
+        <div class="blogDesc">[##_desc_##] <span class="userID">[##_blogger_##]</span></div>
+      </div>
+      </s_sidebar_element>
+      <!-- 카테고리 -->
+       <div class="category">
+         <h3>카테고리</h3>
+         [##_category_##]
+       </div>
 
-      </div><!-- entry close -->
-      </s_article_rep>
-      <div class="entry">19. 페이지</div>
-    </div> <!-- content close -->
+     
 
-
-
-
-    <div id="sidebar">
-    </div> <!-- sidebar close -->
-    <div id="footer">
-    </div> <!-- footer close -->
-  </div> <!-- container close -->
-  </s_t3>
-</body>
-</html>
+     </div> <!-- sidebar close -->
+     <div id="footer">
+     </div> <!-- footer close -->
+   </div> <!-- container close -->
+   </s_t3>
+ </body>
+ </html>

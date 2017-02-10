@@ -36,8 +36,9 @@ a {
   color: #666;
 }
 #header {
+  width: 1300px;
   padding: 20px 50px;
-  outline: 1px #F00 solid;
+  outline: 2px #E80C7A solid;
   text-align: center;
   background-color: #360F32;
 }
@@ -61,7 +62,7 @@ a {
 }
 #header .blogMenu li {
   font-size: 14px;
-  margin: 0 5px;
+  margin: 10px 5px;
   display: inline-block;
 }
 #header .blogMenu li a {
@@ -71,6 +72,10 @@ a {
   width: 990px;
   margin: 20px auto 0;
   border: 1px #F00 solid;
+}
+#container #content {
+  width: 700px;
+  float: left;
 }
 #container .entry .titleWrap {
   margin-bottom: 30px;
@@ -107,13 +112,14 @@ a {
 #container .entry .comment {
   display: inline-block;
   margin-top: 30px;
+  width: 990px;
 }
 #container .entry .comment .commentWrite > p > textarea {
-  width: 980px;
+  width: 800px;
   border: 2px #00ff00 solid;
 }
 #container .entry .comment .commentWrite > p > input[type="submit"] {
-  float: right;
+  margin-left: 800px;
   background-color: #E87F0C;
   color: #ffe4c4;
   border-radius: 5px;
@@ -154,6 +160,48 @@ a {
   font-size: 11px;
   border-radius: 3px;
   padding: 3px 10px;
+  margin: 0 4px;
   background-color: #E87F0C;
   color: #ffe4c4;
+}
+#container .entry .commentList .control a .control2 a {
+  margin: 0 20px;
+}
+#container .textwrap {
+  border: 1px #F00 solid;
+  margin: 0 20px;
+  border-radius: 3px;
+  text-align: center;
+  width: 800px;
+  margin: 10px 90px;
+}
+#container .textwrap textarea {
+  border: 0 none;
+  width: 98%;
+  resize: none;
+  vertical-align: top;
+  overflow-y: auto;
+}
+#container .paging {
+  margin-left: 450px;
+  padding: 20px 0;
+}
+#container .paging a {
+  border: 1px #00ff00 solid;
+  padding: 0 5px;
+  border-radius: 3px;
+  font-size: 12px;
+}
+#container #sidebar {
+  margin-left: 700px;
+  padding: 5px 10px;
+  border: 1px #F00 solid;
+  height: 400px;
+}
+#container #sidebar .blogImage img {
+  width: 100%;
+  height: 100%;
+}
+#container #sidebar .category {
+  height: 200px;
 }
