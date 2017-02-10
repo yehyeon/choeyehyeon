@@ -74,8 +74,9 @@ a {
   border: 1px #F00 solid;
 }
 #container #content {
-  width: 700px;
   float: left;
+  width: 700px;
+  border: 1px #F00 solid;
 }
 #container .entry .titleWrap {
   margin-bottom: 30px;
@@ -119,6 +120,7 @@ a {
   border: 2px #00ff00 solid;
 }
 #container .entry .comment .commentWrite > p > input[type="submit"] {
+  margin-top: -10px;
   margin-left: 800px;
   background-color: #E87F0C;
   color: #ffe4c4;
@@ -160,14 +162,10 @@ a {
   font-size: 11px;
   border-radius: 3px;
   padding: 3px 10px;
-  margin: 0 4px;
   background-color: #E87F0C;
   color: #ffe4c4;
 }
-#container .entry .commentList .control a .control2 a {
-  margin: 0 20px;
-}
-#container .textwrap {
+#container .entry .textwrap {
   border: 1px #F00 solid;
   margin: 0 20px;
   border-radius: 3px;
@@ -175,33 +173,32 @@ a {
   width: 800px;
   margin: 10px 90px;
 }
-#container .textwrap textarea {
+#container .entry .textwrap textarea {
   border: 0 none;
   width: 98%;
   resize: none;
   vertical-align: top;
   overflow-y: auto;
 }
-#container .paging {
+#container .entry .paging {
   margin-left: 450px;
   padding: 20px 0;
 }
-#container .paging a {
+#container .entry .paging a {
   border: 1px #00ff00 solid;
   padding: 0 5px;
   border-radius: 3px;
   font-size: 12px;
 }
-#container #sidebar {
+#sidebar {
   margin-left: 700px;
-  padding: 5px 10px;
+  padding: 0 10px;
   border: 1px #F00 solid;
-  height: 400px;
 }
-#container #sidebar .blogImage img {
+#sidebar .blogImage img {
   width: 100%;
   height: 100%;
 }
-#container #sidebar .category {
-  height: 200px;
+#sidebar .category {
+  height: 500px;
 }
