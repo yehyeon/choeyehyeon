@@ -6,7 +6,8 @@ body {
   margin: 0;
   padding: 0;
 }
-img {
+img,
+video {
   vertical-align: top;
 }
 ul,
@@ -44,7 +45,6 @@ header {
   background-color: #000;
   vertical-align: middle;
   position: relative;
-  line-height: 20px;
   text-align: center;
 }
 header .logo {
@@ -56,6 +56,7 @@ header .logo {
 header .logo img {
   display: inline-block;
   vertical-align: middle;
+  margin-top: 11px;
 }
 header .top_menu {
   width: 1200px;
@@ -64,52 +65,74 @@ header .top_menu {
 header .top_menu > li {
   float: left;
   width: 190px;
-  padding: 0 15px;
+  padding: 5px 15px;
   text-align: center;
 }
 header .top_menu > li:hover > a {
   color: #008889;
 }
-header .top_menu > li .sub_menu li a:hover {
-  color: #008889;
+header .top_menu > li:hover > a > span {
+  width: 100%;
 }
-header .top_menu li:hover .sub_menu li {
+header .top_menu > li:hover:hover .sub_menu li {
   display: block;
 }
 header .top_menu > li > a {
+  position: relative;
   text-transform: uppercase;
   display: block;
-  margin: 0 auto;
+  margin: 20px auto;
   font-size: 16px;
   font-weight: bold;
   color: #fff;
 }
-header .sub_menu li {
-  height: 0;
-  height: 20px;
-  padding: -10px 0;
+header .top_menu > li > a span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 40px;
+  width: 0;
+  height: 3px;
+  background-color: #008889;
   transition: 1s;
-  display: inline-block;
-  display: none;
 }
-header ul .sub_menu {
+header .top_menu > li .menu_spacing {
+  letter-spacing: -2px;
+}
+header .top_menu > li div {
+  border-right: 1px #f0f0f0 solid;
+}
+header .top_menu > li .sub_menu {
+  padding: 0;
+  transition: 1s;
   margin-top: 20px;
 }
 header .top_menu > li .sub_menu li {
+  height: 20px;
+  padding: -50px 0;
+  transition: 1s;
+  display: inline-block;
+  display: none;
   width: 190px;
   font-size: 13px;
-  line-height: 13px;
+  line-height: 3px;
   margin-top: 23px;
 }
+header .top_menu > li .sub_menu li .po > a {
+  margin-top: 50px;
+}
 header .top_menu > li .sub_menu li:first-child {
-  margin-top: 80px;
+  margin-top: 65px;
+}
+header .top_menu > li .sub_menu li:hover {
+  display: block;
 }
 header .top_menu > li .sub_menu li a {
   display: block;
   text-transform: uppercase;
 }
-header .top_menu > li .sub_menu li:hover {
-  display: block;
+header .top_menu > li .sub_menu li a:hover {
+  color: #008889;
 }
 header .top_right {
   position: absolute;
@@ -124,9 +147,9 @@ header .top_right .home {
   left: 0;
   width: 40px;
   height: 35px;
-  background-image: url(../images/teakwang/home-ico2.png);
+  background-image: url(../images/teakwang/home-ico.png);
   background-repeat: no-repeat;
-  background-position: -3px 2px;
+  background-position: 10px 10px;
   background-color: #333;
   cursor: pointer;
 }
@@ -203,7 +226,7 @@ article .tae {
   width: 469px;
   height: 132px;
   margin-left: 684px;
-  margin-top: -604px;
+  margin-top: -600px;
   border: 3px #ccc solid;
   vertical-align: middle;
 }
@@ -230,7 +253,7 @@ content li img {
 content li:hover img {
   transform: scale(1.5, 1.5) rotate(15deg);
 }
-li .txt {
+content li .txt {
   position: absolute;
   left: 0;
   top: 0;
@@ -244,13 +267,13 @@ li .txt {
   width: 100%;
   text-align: center;
 }
-li .txt .와꾸 {
+content li .txt .와꾸 {
   display: inline-block;
   border: 1px #F00 solid;
   padding: 10px 20px;
   position: relative;
 }
-li .txt .와꾸 .line1 {
+content li .txt .와꾸 .line1 {
   position: absolute;
   height: 4px;
   background-color: #FFF;
@@ -259,10 +282,10 @@ li .txt .와꾸 .line1 {
   left: 0;
   transition: 0.5s;
 }
-li:hover .와꾸 .line1 {
+content li:hover .와꾸 .line1 {
   width: 100%;
 }
-li .txt .와꾸 .line2 {
+content li .txt .와꾸 .line2 {
   position: absolute;
   height: 0;
   background-color: #FFF;
@@ -272,10 +295,10 @@ li .txt .와꾸 .line2 {
   transition: 0.5s;
   transition-delay: 0.5s;
 }
-li:hover .와꾸 .line2 {
+content li:hover .와꾸 .line2 {
   height: 100%;
 }
-li .txt .와꾸 .line3 {
+content li .txt .와꾸 .line3 {
   position: absolute;
   height: 4px;
   background-color: #FFF;
@@ -285,10 +308,10 @@ li .txt .와꾸 .line3 {
   transition: 0.5s;
   transition-delay: 1s;
 }
-li:hover .와꾸 .line3 {
+content li:hover .와꾸 .line3 {
   width: 100%;
 }
-li .txt .와꾸 .line4 {
+content li .txt .와꾸 .line4 {
   position: absolute;
   height: 0;
   background-color: #FFF;
@@ -298,12 +321,86 @@ li .txt .와꾸 .line4 {
   transition: 0.5s;
   transition-delay: 1.5s;
 }
-li:hover .와꾸 .line4 {
+content li:hover .와꾸 .line4 {
   height: 100%;
 }
 @media screen and (max-width: 480px) {
-  .grid li {
+  content .grid li {
     float: none;
     width: auto;
   }
+}
+.map {
+  margin-top: 0;
+}
+.map img {
+  width: 110%;
+}
+.soc_sec div {
+  width: 50%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+}
+.soc_sec div img {
+  width: 100%;
+  transition: 1s;
+}
+.soc_sec div > span {
+  display: block;
+  position: absolute;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 25px;
+  line-height: 25px;
+}
+.soc_sec div span.social-01 {
+  padding-top: 20px;
+  top: 191px;
+  left: 50%;
+  margin-left: -105px;
+}
+.soc_sec div span.social-02 {
+  top: 260px;
+  left: 50%;
+  margin-left: -60px;
+  font-size: 20px;
+  line-height: 20px;
+}
+.soc_sec div span.social-03 {
+  padding-top: 20px;
+  top: 191px;
+  left: 50%;
+  margin-left: -177.64px;
+}
+.soc_sec div span.line {
+  position: absolute;
+  width: 20px;
+  height: 3px;
+  top: 0;
+  left: 50%;
+  margin-left: -10px;
+  background-color: #fff;
+  transition: 0.2s;
+  transform-origin: center;
+}
+.soc_sec div:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 131, 132, 0.5);
+  opacity: 0;
+  transition: 1s;
+}
+.soc_sec div:hover img {
+  transform: scale(1.1);
+}
+.soc_sec div:hover span.line {
+  width: 0;
+}
+.soc_sec div:hover:after {
+  opacity: 1;
 }
