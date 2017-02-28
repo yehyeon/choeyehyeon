@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>input</title>
+  </head>
+
+  <body>
+  <dl>
+    <dt>한줄입력</dt>
+    <dd><input type="text" name="user" placeholder="아이디"></dd>
+    <!-- 플레이스홀더(표시상의 형태) 대신에 value="아이디(입력하는 내용이 값이 된다)  도 가능" -->
+    <dt>비밀번호</dt>
+    <dd><input type="password"/></dd>
+    <dt>단일선택</dt>
+    <dd><input type="radio"/></dd>
+    <dt>다중선택</dt>
+    <dd><input type="checkbox"/></dd>
+    <dt>파일선택</dt>
+    <dd><input type="file"/></dd>
+    <dt>범용버튼</dt>
+    <dd><input type="button"value="범용버튼"/></dd>
+    <dt>초기화</dt>
+    <dd><input type="reset" value="reset"/></dd>
+    <dt>전송</dt>
+    <dd><input type="submit"value="전송"/></dd>
+    <dt>텍스트영역</dt>
+    <dd><textarea></textarea></dd>
+    <dt>선택상자</dt>
+    <dd>
+      <select>
+      <option >직접입력</option>
+      <option >www.naver.com</option>
+      <option >www.gmail.com</option>
+      </select>
+    </dd>
+    <dt>color</dt>
+    <dd><input type="color"></dd>
+   <dt>날짜</dt>
+   <dd><input type="date"></dd>
+  </dl>
+
+<div>
+  <fieldset>
+    <legend>필수입력항목</legend>
+  <form action="../list.html" method="post">
+  <p><label for="user"></label>아이디:<input type="text" name="username" id="user" placeholder="" required="입력해" ><required/></p>
+  <p>비밀번호:<input type="password" name="d"/></p>
+  <p>성별:  <input type="radio" name="gender" value="man" checked="inable">남
+           <input type="radio" name="gender" value="woman">여
+  </p>
+    <p><input type="submit"></p>
+
+   <ul>
+     <li>
+<input type="color"><br/>
+<input type="date"><br/>
+<input type="datetime"><br/>
+<input type="datetime-local"><br/>
+<input type="email"><br/>
+<input type="month"><br/>
+<input type="number"><br/>
+<input type="range"><br/>
+<input type="search"><br/>
+<input type="tel"><br/>
+<input type="time"><br/>
+<input type="url"><br/>
+<input type="week"><br/>
+   </li>
+ </ul>
+
+</form>
+</div>
+</fieldset>
+</body>
+</html>

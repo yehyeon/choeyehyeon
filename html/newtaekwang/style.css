@@ -187,7 +187,16 @@
         border:1px #F00 solid;
         box-sizing:border-box;
     }
-
+    @media screen and (max-width:500px){
+        .intro .titler
+        {left: 0;
+        top:500px;
+        z-index: 324;
+        position: absolute;
+        text-align: center;
+        }
+        .titler img{margin-top:50px;}
+        }
         @media screen and (max-width:800px){
             .intro{
                 height:300px;}

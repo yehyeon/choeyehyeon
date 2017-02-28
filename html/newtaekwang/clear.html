@@ -1,0 +1,44 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+  .wrap{
+    border:2px #00F solid;
+  }
+  .a{
+    width:200px; height:200px;
+    border:1px #F00 solid;
+    float:left;
+    margin-left:-10px
+  }
+
+  .b{
+    width:200px; height:300px;
+    border:1px #F00 solid;
+    float:right;
+  }
+
+  .wrap:after{
+    content:"";
+    clear:both;
+    display:block; border:1px #0f0 solid;
+  }
+  /*footer를 밑으로 내려보내기 위해서, 이게 없으면 footer가 위로 뜸*/
+
+  .footer{
+    height:200px;
+    border:1px #F00 solid;
+  }
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="a">Abox</div>
+    <div class="b">Bbox</div>
+  </div>
+  <div class="footer"></div>
+</body>
+</html>
