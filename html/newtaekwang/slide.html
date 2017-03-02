@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{margin:0; padding:0;}
+        html,body{height:100%;}
+        ul{list-style:none;}
+        .slide{
+            height:100%;
+            border:1px #F00 solid;
+            position:relative;
+            text-align:center;
+        }
+
+        .slide li{
+           display:inline-block;
+        }
+        .slide li>a{
+            position:relative;
+            top:600px;
+            z-index:10;
+            display:block;
+            width:20px;
+            height:20px;
+            border:1px #F00 solid;
+        }
+        .slide li.on>div{
+            display:block;
+        }
+        .slide li>div{
+            position:absolute;
+            border:1px #F00 solid;
+            left:0;
+            top:0;
+            width:100%;
+            height:100%;
+            text-align:center;
+            display:none;
+        }
+
+
+
+        .slide li img{
+            position:relative;
+            top:200px;
+        }
+        .slide li cite{
+            font-size:20px;
+        }
+         .slide li cite,
+         .slide li span{
+             display:block;
+             position:relative;
+            top:200px;
+         }
+
+
+
+    </style>
+</head>
+<body>
+
+
+    <div class="slide">
+
+        <div class="btngroup">
+            <button class="next">text</button>
+            <button class="prev">text</button>
+        </div>
+
+        <ul>
+            <li class="on">
+                <a href="">1</a>
+                <div>
+                    <img src="http://www.tkgroup.co.kr/kor/_Img/Content/portfolio01.png" alt="">
+                    <cite>text</cite>
+                    <span></span>
+                </div>
+            </li>
+            <li>
+
+                <a href="">2</a>
+                <div>
+                    <img src="http://www.tkgroup.co.kr/kor/_Img/Content/portfolio02.png" alt="">
+                    <cite>text</cite>
+                    <span></span>
+                </div>
+            </li>
+            <li>
+                <a href="">3</a>
+                <div>
+                    <img src="http://www.tkgroup.co.kr/kor/_Img/Content/portfolio03.png" alt="">
+                    <cite>text</cite>
+                    <span></span>
+                </div>
+            </li>
+            <li>
+                <a href="">4</a>
+                <div>
+                    <img src="http://www.tkgroup.co.kr/kor/_Img/Content/portfolio04.png" alt="">
+                    <cite>text</cite>
+                    <span></span>
+                </div>
+            </li>
+            <li>
+                <a href="">5</a>
+                <div>
+                <img src="http://www.tkgroup.co.kr/kor/_Img/Content/portfolio05.png" alt="">
+                <cite>text</cite>
+                <span></span>
+                </div>
+            </li>
+        </ul>
+
+
+    </div>
+
+
+
+
+</body>
+</html>
