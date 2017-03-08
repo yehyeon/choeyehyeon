@@ -1,0 +1,813 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>보배드림</title>
+    <style type="text/css">
+  /*reset*/
+      h1,h2,h3,p,a{margin: 0;padding: 0;}
+      ol,ul,li{margin: 0;padding:0;list-style:none;font-size:11px;}
+      span,p,a{text-decoration:none;color:#000;font-size:11px;}
+      img{vertical-align:middle;}
+      fieldset{border: 0; margin: 0;padding: 0;}
+      legend{text-indent:-9999px;font-size:0;}
+  /*layout*/
+  /*즐겨찾기*/
+      .top_wrap{border-bottom: 1pŒx #000 solid;}
+      .top{outline:1px #f00 solid; width: 990px;height: 30px;background-color: rgb(248,248,248);margin: 0 auto;position:relative;}
+      .top>div{outline:1px #f00 solid;width: 300px;height: 30px;position: absolute;left: 0;}
+      .top>a ul{outline:1px #f00 solid;position: absolute;right: 0;top: 7px;}
+      .top>a ul li{outline:1px #f00 solid;;padding: 0 5px; display: inline;}
+
+  /*wrap*/
+      .wrap{outline:1px #f00 solid;width: 990px;height: 1983px;margin: 0 auto;}
+
+  /*header*/
+      header{outline:1px #f00 solid; width: 990px;height: 184px;}
+      header .logo{outline:1px #f00 solid; height: 107px;position: relative;}
+      header .logo .logo_l{outline:1px #f00 solid; width: 313px;margin-right: 74px;position:absolute;left: 0;height: 100%;}
+      header .logo .logo_l img{margin-top: 35px;margin-bottom: 24px;}
+      header .logo .logo_l li{outline:1px #f00 solid; float: left;padding: 0 9px;}
+      header .logo .logo_r{outline:1px #f00 solid; width: 240px;margin-left: 83px;position: absolute;right: 0;height: 100%;top: 20px;}
+      header .logo .logo_c{outline:1px #0f0 solid; width: 280px;height: 100%;margin-left: 387px;}
+      header .logo .logo_c>img{margin-top: 20px;}
+      header .logo .logo_c div{width: 280px;height: 30px;position:relative;}
+      header .logo .logo_c div input{width: 240px;border:2px #3b5999 solid;position:absolute;left: 0;}
+      header .logo .logo_c div>img{width: 40px;height: 21px;position: absolute;right: 0px;top: 0;}
+
+      header nav{outline:1px #f00 solid; height: 77px;}
+      header nav .menubar{outline:1px #f00 solid; height: 39px;background-color: rgb(59,89,153);position: relative;}
+      header nav .menubar li{outline:1px #f00 solid; float: left;padding: 0 12px;margin-top: 10px;}
+      header nav .menubar li span{color:#fff;font-size: 15px}
+      header nav .menubar>div{outline:1px #f00 solid;position: absolute;right: 0;margin-top: 5px;}
+      header nav .menubar>div span{color:#fff;}
+
+      header nav .menusub{outline:1px #f00 solid;height: 38px; position: relative;}
+      header nav .menusub ul{ouline:1px #f00 solid; width: 750px;}
+      header nav .menusub ul li{outline:1px #f00 solid;width: 70px; padding: 0 6px; display:inline; line-height: 38px;}
+      header nav .menusub div{outline:1px #f00 solid; position: absolute;right: 0;top: 0;}
+      header nav .menusub div span{line-height: 38px;}
+      header nav .menusub div span:nth-of-type(even){color:#005dde;}
+
+  /*section-left*/
+      section{outline:1px #f00 solid; height: 1344px;margin-top: 5px;position:relative;}
+      section .left{outline:1px #f00 solid; width: 748px;height: 100%;margin-right: 5px;}
+      section .left article{outline:1px #f00 solid; width: 748px;height: 358px;position: relative;}
+      section .left article .img1{outline:1px #f00 solid;width: 520px;height: 100px;margin-right: 6px;position: absolute;left: 0;}
+      section .left article .img2{outline:1px #f00 solid;width: 220px;height: 100px;position: absolute;right: 0;top: 0;}
+      section .left article .img3{outline:1px #f00 solid;width: 400px;height: 232px;position: absolute;bottom: 0;left: 0;}
+      section .left article .img3>img{width: 400px;height: 232px;}
+      section .left article .img3 .textcover{outline:1px #f00 solid; background-color: #42413b;width: 400px;height: 42px;position: absolute;bottom: 0;}
+      section .left article .img3 .textcover h3{color:#fff;line-height: 15px;font-size: 12px;margin-top: 5px;}
+      section .left article .img3 .textcover span{color:#fff;line-height: 15px;display: block;}
+      section .left article .img3 .textcover div{outline:1px #f00 solid;width: 35px;height: 35px;position: absolute;right: 5px;top: 0px;}
+      section .left article .img3 .textcover div span{text-align: center;}
+      section .left article ul{outline:1px #f00 solid;width: 337px;height: 232px;position: absolute;bottom: 0;right: 0;}
+      section .left article ul li{outline:1px #f00 solid; height: 71px;padding-bottom: 6px;}
+      section .left article ul li img{outline:1px #f00 solid; width: 110px;height: 70px;float: left;margin-right: 13px;}
+
+      section .left .left_b{outline:1px #f00 solid;height: 198px;position: relative;}
+      section .left .left_b ul{outline:1px #f00 solid;width: 748px;height: 194px;position: absolute;left: 0;top: 0;}
+      section .left .left_b ul li:first-child{width: 200px;height: 12px;margin-top: 15px;margin-bottom: 9px;}
+      section .left .left_b ul li:last-child{width: 50px;height: 10px;position: absolute;right: 5px;top: 15px;}
+      section .left .left_b ul li>h2{font-size:11px;color:#333333}
+      section .left .left_b ul li[class="img"]{float: left;width: 136px;height: 145px;margin-right: 17px;}
+      section .left .left_b ul li:nth-last-child(2){margin-right: 0;}
+      section .left .left_b ul li img[src^="../images/images1/car"]{width: 136px;height: 102px;}
+
+      section .left .left_b ul li cite{display:block;}
+      section .left .left_b ul li:last-child{width: 50px;position: absolute;right: 0;}
+      section .left .left_b ul li img[src^="../images/images1/icon"]{width: 3px;height: 5px;position: absolute;right: 0;top: 5px;}
+
+
+
+
+      section .left .left_b ul li img[src^="../images/images1/icon"]{width: 3px;height: 5px;position: absolute;right: 0;top: 6px;}
+      section .left .left_b ul li span{color:#a2a2a2;}
+      section .left .left_b ul li cite{display:block;text-align: center;}
+
+
+  /*section-right*/
+      section .right{outline:1px #f00 solid; width: 237px;height: 100%;position: absolute;right: 0;top: 0;}
+      section .right .join{outline:1px #f00 solid; height: 102px;}
+      section .right .join form{outline:1px #f00 solid; width: 211px;height: 80px;margin-left: 14px;position: relative;}
+      section .right .join input:first-child{width: 140px;height: 24px;margin: 0 4px 0 0;}
+      section .right .join input:nth-of-type(2){width: 140px;height: 24px;margin: 0 4px 0 0;}
+      section .right .join input[type="submit"]{width: 54px;height: 55px;position: absolute;right: 0;top: 0;}
+      section .right .join div{outline:1px #f00 solid; position: absolute;left: 0;bottom: 0;}
+      section .right .join div input[type="checkbox"]{width: 13px;height: 13px;}
+      section .right .join ul{outline:1px #f00 solid; position: absolute;right: 0;bottom: 0;}
+      section .right .join ul li{outline:1px #f00 solid; display:inline;}
+
+      section .right .aside1{outline:1px #f00 solid;height: 236px;position:relative;}
+      section .right .aside1 h2{outline:1px #f00 solid;width: 100px;height: 12px;font-size: 12px;position: absolute;left: 12px;top: 12px;}
+      section .right .aside1 div{outline:1px #f00 solid;position: absolute;right: 10px;top: 10px;}
+      section .right .aside1 ul{outline:1px #f00 solid;width: 215px;position: absolute;left: 12px;top: 42px;}
+      section .right .aside1 ul li{outline:1px #f00 solid;height: 65px;position: relative;}
+      section .right .aside1 ul li span{outline:1px #f00 solid;width: 104px;display:block;}
+      section .right .aside1 ul li img[alt^="num"]{float: left;}
+      section .right .aside1 ul li img[src^="../images/images1/car"]{width: 78px;height: 54px;position: absolute;top: 0;right: 0;}
+
+      section .right .aside2{outline:1px #f00 solid;height: 199px;}
+      section .right .aside2>div{outline:1px #f00 solid;width: 215px;height: 199px;margin-left: 12px;margin-right: 10px;position: relative;}
+      section .right .aside2>div h2{outline:1px #f00 solid;width: 100px;height: 12px;font-size: 12px;position: absolute;top: 12px;}
+      section .right .aside2>div ul{outline:1px #f00 solid;width: 215px;position: absolute;top: 33px;}
+      section .right .aside2>div ul li{outline:1px #f00 solid;margin-bottom: 10px;}
+      section .right .aside2>div ul li:first-child{height: 56px;margin-bottom: 13px;}
+      section .right .aside2>div ul .list img{float: left;}
+      section .right .aside2>div ul .list span{display:block;}
+      section .right .aside2>div ul li img[src^="../images/images1/list"]{margin-top: 5px;margin-right: 6px;}
+      section .right .aside2>div>div{outline:1px #f00 solid;width: 40px;height: 11px; position: absolute;right: 0;top: 12px;}
+      section .right .aside2>div>div img{position: absolute;right: 0;top: 6px;}
+      section .right .aside2>div>div span{position: absolute;color:#a2a2a2;}
+
+      section .right .aside3{outline:1px #f00 solid;height: 195px;}
+      section .right .aside3 .popular{outline:1px #f00 solid;width: 215px;height: 195px;margin-left: 12px;margin-right: 10px;position: relative;}
+      section .right .aside3 .popular h2{outline:1px #f00 solid;width: 100px;height: 12px;font-size: 12px;position: absolute;top: 12px;}
+      section .right .aside3 .popular ul{outline:1px #f00 solid;width: 215px;position: absolute;top: 33px;}
+      section .right .aside3 .popular ul li{outline:1px #f00 solid; height: 45px;margin-bottom: 5px;}
+      section .right .aside3 .popular ul li img{width: 78px;height: 42px;margin-right: 10px;float: left;}
+      section .right .aside3 .popular .more{outline:1px #f00 solid;width: 40px;height: 11px; position: absolute;right: 0;top: 12px;}
+      section .right .aside3 .popular .more img{position: absolute;right: 0;top: 6px;}
+      section .right .aside3 .popular .more span{position: absolute;color:#a2a2a2;}
+
+      section .right .aside3 .mycar{outline:1px #f00 solid;width: 215px;height: 195px;margin-left: 12px;margin-right: 10px;position: relative;}
+      section .right .aside3 .mycar h2{outline:1px #f00 solid;width: 100px;height: 12px;font-size: 12px;position: absolute;top: 12px;}
+      section .right .aside3 .mycar ul{outline:1px #f00 solid;width: 215px;position: absolute;top: 33px;}
+      section .right .aside3 .mycar ul li{outline:1px #f00 solid; height: 45px;margin-bottom: 5px;}
+      section .right .aside3 .mycar ul li img[src^="../images/images1/car"]{width: 78px;height: 42px;margin-left: 10px;float: right;}
+      section .right .aside3 .mycar ul li img[src^="../images/images1/icon"]{float: left;}
+      section .right .aside3 .mycar ul li span{width: 85px;height: 50px;display:block;float: left;}
+      section .right .aside3 .mycar .more{outline:1px #f00 solid;width: 40px;height: 11px; position: absolute;right: 0;top: 12px;}
+      section .right .aside3 .mycar .more img{position: absolute;right: 0;top: 6px;}
+      section .right .aside3 .mycar .more span{position: absolute;color:#a2a2a2;}
+
+      section .right .aside3 .popular .img {outline:1px #f00 solid; width: 215px;height: 142px;;position: relative;top: 33px;}
+      section .right .aside3 .popular .img>img{width: 215px;height: 142px;}
+      section .right .aside3 .popular .img .covertext{outline:1px #f00 solid; width: 215px;height: 25px;position: absolute;bottom: 0;background-color: rgb(51,51,51);}
+      section .right .aside3 .popular .img .covertext span{margin-left: 5px;color:#fff;}
+      section .right .aside3 .popular .img .covertext img{float: right;margin-top: 5px;margin-right: 5px;}
+
+      section .right .aside4{outline:1px #f00 solid;height: 108px;position: relative;}
+      section .right .aside4 .event{outline:1px #f00 solid;width: 215px;height: 108px;margin-left: 12px;margin-right: 10px;position: relative;}
+      section .right .aside4 .event h2{outline:1px #f00 solid;width: 100px;height: 12px;font-size: 12px;position: absolute;top: 12px;}
+      section .right .aside4 .event .more{outline:1px #f00 solid;width: 40px;height: 11px; position: absolute;right: 0;top: 12px;}
+      section .right .aside4 .event .more img{position: absolute;right: 0;top: 6px;}
+      section .right .aside4 .event .more span{position: absolute;color:#a2a2a2;}
+      section .right .aside4 .event ul{outline:1px #f00 solid;width: 215px;position: absolute;top: 33px;}
+      section .right .aside4 .event ul li{outline:1px #f00 solid;height: 55px;}
+      section .right .aside4 .event ul li img{float: left;margin-right: 10px;}
+
+      section .right .aside5{outline:1px #f00 solid;height: 103px;}
+      section .right .aside5 .sns{outline:1px #f00 solid;width: 215px;height: 103px;margin-left: 12px;margin-right: 10px;position: relative;}
+      section .right .aside5 .sns h2{outline:1px #f00 solid;height: 12px;font-size: 12px;position: absolute;top: 12px;}
+      section .right .aside5 .sns .sns_list{outline:1px #f00 solid;width: 215px;position: absolute;top: 40px;}
+      section .right .aside5 .sns .sns_list img{float: left;margin-right: 3px;}
+
+  /*footer*/
+      footer{outline:1px #f00 solid; height: 450px;}
+      footer .footer_top{outline:1px #f00 solid; height: 30px;position: relative;}
+      footer .footer_top h3{width: 50px;height: 11px;font-size:12px;position: absolute;top: 5px;left: 12px;}
+      footer .footer_top li{float: left;position: absolute;left: 70px;top: 5px;}
+      footer .footer_top div{outline:1px #f00 solid; width: 100px;height: 30px;position: absolute;right: 15px;top: 0;}
+
+      footer .footer_menu{outline:1px #f00 solid; height: 216px;}
+      footer .footer_menu>div{outline:1px #f00 solid;margin-top: 20px;margin-left: 15px;}
+      footer .footer_menu .sub_menu{outline:1px #f00 solid; width: 125px;float: left;}
+      footer .footer_menu .sub_menu h3{font-size: 12px;line-height: 20px;}
+      footer .footer_menu .sub_menu ul li{outline:1px #f00 solid; line-height: 19px;}
+
+      footer .footer_tel{outline:1px #f00 solid; height: 31px;}
+      footer .footer_tel b{font-size: 11px;}
+      footer .footer_bottom ul{outline:1px #f00 solid;width: 500px; margin: 5px auto 10px;}
+      footer .footer_bottom ul li{outline:1px #f00 solid;padding: 0 2px; display:inline;}
+      footer .address p{width: 800px;margin: 0 auto;text-align: center;}
+
+    </style>
+</head>
+<body>
+    <div class="top_wrap">
+      <div class="top">
+        <div>
+          <img src="../images/images1/icon_star.png" alt=""/>
+          <span>즐겨찾기</span>
+          <img src="../images/images1/icon_num10.png" alt=""/>
+          <span>기아 K5 하이브리드 (12년식)</span>
+          <img src="../images/images1/icon_up.png" alt=""/>
+          <span>41</span>
+        </div>
+        <a href="">
+          <ul>
+            <li>
+              <span>로그인</span>
+            </li>
+            <li>
+              <span>회원가입</span>
+            </li>
+            <li>
+              <span>마이페이지</span>
+              <img src="../images/images1/icon_down.png" alt=""/>
+            </li>
+            <li>
+              <span>쪽지1</span>
+            </li>
+            <li>
+              <span>찜한차량2</span>
+            </li>
+            <li>
+              <span>고객센터</span>
+            </li>
+            <li>
+              <span>전체메뉴</span>
+              <img src="../images/images1/icon_down.png" alt=""/>
+            </li>
+            <li>
+              <img src="../images/images1/icon_mobile.png" alt=""/>
+              <span>모바일</span>
+            </li>
+          </ul>
+        </a>
+      </div>
+    </div>
+    <div class="wrap">
+      <header>
+        <div class="logo">
+          <div class="logo_l">
+            <h1><img src="../images/images1/logo.png" alt="보배드림"></h1>
+            <a href="">
+              <ul>
+                <li>
+                  <span>인기중고차</span>
+                </li>
+                <li>
+                  <span>오토바이</span>
+                </li>
+                <li>
+                  <span>용품센터</span>
+                </li>
+                <li>
+                  <span>협력업체</span>
+                </li>
+                <li>
+                  <span>이벤트</span>
+                </li>
+              </ul>
+            </a>
+          </div>
+          <div class="logo_r">
+            <img src="../images/images1/banner_top_right.png" alt="뮤지컬 설록홈즈 공연초대 이벤트"/>
+          </div>
+          <div class="logo_c">
+            <img src="../images/images1/banner_top.png" alt="인터넷으로 저렴한 삼성화재 애니카 다이렉트"/>
+            <div>
+              <input type="text" text="">
+              <img src="../images/images1/icon_zoom2.png" alt=""/>
+            </div>
+          </div>
+        </div>
+        <nav>
+          <div class="menubar">
+            <a href="">
+              <ul>
+                <li>
+                  <span>사이버매장</span>
+                </li>
+                <li>
+                  <span>국내중고차</span>
+                </li>
+                <li>
+                  <span>수입중고차</span>
+                </li>
+                <li>
+                  <span>내차팔기</span>
+                </li>
+                <li>
+                  <span>커뮤니티</span>
+                </li>
+                <li>
+                  <span>더보기</span>
+                  <img src="../images/images1/icon_menu_down.png" alt=""/>
+                </li>
+              </ul>
+            </a>
+            <div>
+              <span>공지</span>
+              <img src="../images/images1/icon_menu_right.png" alt=""/>
+              <span>보배드림 어플 업데이트 안내</span>
+            </div>
+          </div>
+          <div class="menusub">
+            <ul>
+              <li><a href=""><span>국산차매장</span></a></li>
+              <li><a href=""><span>수입차매장</span></a></li>
+              <li><a href=""><span>승용차매장</span></a></li>
+              <li><a href=""><span>스포츠카매장</span></a></li>
+              <li><a href=""><span>4륜/SUV매장</span></a></li>
+              <li><a href=""><span>벤/승합차</span></a></li>
+              <li><a href=""><span>튜닝카매장</span></a></li>
+              <li><a href=""><span>올드카매장</span></a></li>
+              <li><a href=""><span>오토갤러리매장</span></a></li>
+            </ul>
+            <div>
+              <span>오늘 방문</span>
+              <span>981,478</span>
+              <span>어제 방문</span>
+              <span>981,478</span>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <section>
+        <article class="left">
+          <article>
+            <div class="img1">
+              <img src="../images/images1/car_left1.png" alt="car_left1"/>
+            </div>
+            <div class="img2">
+              <img src="../images/images1/partytime.png" alt="party time"/>
+            </div>
+            <div class="img3">
+              <img src="../images/images1/car_left2.png" alt="car_left2"/>
+              <div class="textcover">
+                <h3>사이버매장 특종매물</h3>
+                <span>2013아우디 R8 5.2 V10 스파이더</span>
+                <div>
+                  <span>2/3</span>
+                  <img src="../images/images1/icon_left_right.png" alt=""/>
+                </div>
+              </div>
+            </div>
+            <a href="">
+              <ul>
+                <li>
+                  <img src="../images/images1/car_left3.png" alt="car_left3"/>
+                  <cite>국산중고차 특종매물</cite><br />
+                  <span>1988 현대 스텔라 1.5 88형 GLX <br />극 희소. 1988올림픽 공식모델!!</span>
+                </li>
+                <li>
+                  <img src="../images/images1/car_left4.png" alt="car_left4"/>
+                  <cite>수입중고차 특종매물</cite><br />
+                  <span>2012 람보르기니 가야르도 LP560&ndash;4<br />11.8초&rarr;200KM 람보르기니!!</span>
+                </li>
+                <li>
+                  <img src="../images/images1/car_left5.png" alt="car_left5"/>
+                  <cite>오토바이 특종매물</cite><br />
+                  <span>2011 브램모 엠펄즈 R<br />공인연비 1L&rarr;16km</span>
+                </li>
+              </ul>
+            </a>
+          </article>
+          <article class="left_b">
+            <ul>
+              <li><a href="">
+                <h2>사이버매장 신규매물</h2>
+              </a></li>
+              <li class="img"><a href="">
+                <img src="../images/images1/car_left6.png" alt="car_left6"/>
+                <cite>BMW 1M 쿠페<br/>2001년식</cite>
+              </a></li>
+              <li class="img"><a href="">
+                <img src="../images/images1/car_left7.png" alt="car_left7"/>
+                <cite>렉서스 뉴 ES300H<br/>2001년식</cite>
+              </a></li>
+              <li class="img"><a href="">
+                <img src="../images/images1/car_left8.png" alt="car_left8"/>
+                <cite>람보르기니 가야르도<br/>2001년식</cite>
+              </a></li>
+              <li class="img"><a href="">
+                <img src="../images/images1/car_left9.png" alt="car_left9"/>
+                <cite>렉서스 뉴 ES300H<br/>2001년식</cite>
+              </a></li>
+              <li class="img"><a href="">
+                <img src="../images/images1/car_left10.png" alt="car_left10"/>
+                <cite>람보르기니 가야르도<br/>2001년식</cite>
+              </a></li>
+              <li><a href="">
+                <span>더보기</span>
+                <img src="../images/images1/icon_more.png" alt=""/>
+              </a></li>
+            </ul>
+          </article>
+          <article class="left_b">
+            <ul>
+              <li><a href="">
+                <h2>국산중고차 신규매물</h2>
+              </a></li>
+              <li class="img"><a href="">
+                <img src="../images/images1/car_left11.png" alt="car_left11"/>
+                <cite>BMW 1M 쿠페<br/>2001년식</cite>
+              </a></li>
+              <li class="img"><a href="">
+                <img src="../images/images1/car_left12.png" alt="car_left12"/>
+                <cite>렉서스 뉴 ES300H<br/>2001년식</cite>
+              </a></li>
+              <li class="img"><a href="">
+                <img src="../images/images1/car_left13.png" alt="car_left13"/>
+                <cite>람보르기니 가야르도<br/>2001년식</cite>
+              </a></li>
+              <li class="img"><a href="">
+                <img src="../images/images1/car_left14.png" alt="car_left14"/>
+                <cite>렉서스 뉴 ES300H<br/>2001년식</cite>
+              </a></li>
+              <li class="img"><a href="">
+                <img src="../images/images1/car_left15.png" alt="car_left15"/>
+                <cite>람보르기니 가야르도<br/>2001년식</cite>
+              </a></li>
+              <li><a href="">
+                <span>더보기</span>
+                <img src="../images/images1/icon_more.png" alt=""/>
+              </a></li>
+            </ul>
+          </article>
+          <article class="left_b">
+            <ul>
+              <li><a href="">
+                <h2>수입중고차 신규매물</h2>
+              </a></li>
+              <li class="img"><a href="">
+                <img src="../images/images1/car_left16.png" alt="car_left16"/>
+                <cite>BMW 1M 쿠페<br/>2001년식</cite>
+              </a></li>
+              <li class="img"><a href="">
+                <img src="../images/images1/car_left17.png" alt="car_left17"/>
+                <cite>렉서스 뉴 ES300H<br/>2001년식</cite>
+              </a></li>
+              <li class="img"><a href="">
+                <img src="../images/images1/car_left18.png" alt="car_left18"/>
+                <cite>람보르기니 가야르도<br/>2001년식</cite>
+              </a></li>
+              <li class="img"><a href="">
+                <img src="../images/images1/car_left19.png" alt="car_left19"/>
+                <cite>렉서스 뉴 ES300H<br/>2001년식</cite>
+              </a></li>
+              <li class="img"><a href="">
+                <img src="../images/images1/car_left20.png" alt="car_left20"/>
+                <cite>람보르기니 가야르도<br/>2001년식</cite>
+              </a></li>
+              <li><a href="">
+                <span>더보기</span>
+                <img src="../images/images1/icon_more.png" alt=""/>
+              </a></li>
+            </ul>
+          </article>
+          <article class="left_b">
+            <ul>
+              <li><a href="">
+                <h2>오토바이 신규매물</h2>
+              </a></li>
+              <li class="img"><a href="">
+                <img src="../images/images1/car_left21.png" alt="car_left21"/>
+                <cite>BMW 1M 쿠페<br/>2001년식</cite>
+              </a></li>
+              <li class="img"><a href="">
+                <img src="../images/images1/car_left22.png" alt="car_left22"/>
+                <cite>렉서스 뉴 ES300H<br/>2001년식</cite>
+              </a></li>
+              <li class="img"><a href="">
+                <img src="../images/images1/car_left23.png" alt="car_left23"/>
+                <cite>람보르기니 가야르도<br/>2001년식</cite>
+              </a></li>
+              <li class="img"><a href="">
+                <img src="../images/images1/car_left24.png" alt="car_left24"/>
+                <cite>렉서스 뉴 ES300H<br/>2001년식</cite>
+              </a></li>
+              <li class="img"><a href="">
+                <img src="../images/images1/car_left25.png" alt="car_left25"/>
+                <cite>람보르기니 가야르도<br/>2001년식</cite>
+              </a></li>
+              <li><a href="">
+                <span>더보기</span>
+                <img src="../images/images1/icon_more.png" alt=""/>
+              </a></li>
+            </ul>
+          </article>
+          <article class="left_b">
+            <ul>
+              <li><a href="">
+                <h2>협력업체</h2>
+              </a></li>
+              <li class="img"><a href="">
+                <img src="../images/images1/car_left26.png" alt="car_left26"/>
+                <cite>BMW 1M 쿠페<br/>2001년식</cite>
+              </a></li>
+              <li class="img"><a href="">
+                <img src="../images/images1/car_left27.png" alt="car_left27"/>
+                <cite>렉서스 뉴 ES300H<br/>2001년식</cite>
+              </a></li>
+              <li class="img"><a href="">
+                <img src="../images/images1/car_left28.png" alt="car_left28"/>
+                <cite>람보르기니 가야르도<br/>2001년식</cite>
+              </a></li>
+              <li class="img"><a href="">
+                <img src="../images/images1/car_left29.png" alt="car_left29"/>
+                <cite>렉서스 뉴 ES300H<br/>2001년식</cite>
+              </a></li>
+              <li class="img"><a href="">
+                <img src="../images/images1/car_left30.png" alt="car_left30"/>
+                <cite>람보르기니 가야르도<br/>2001년식</cite>
+              </a></li>
+              <li><a href="">
+                <span>더보기</span>
+                <img src="../images/images1/icon_more.png" alt=""/>
+              </a></li>
+            </ul>
+          </article>
+        </article>
+        <article class="right">
+          <div class="join">
+            <fieldset>
+              <legend>회원가입</legend>
+              <form action="">
+                <input type="text" placeholder="아이디"/>
+                <input type="password" placeholder="비밀번호"/>
+                <input type="submit" value="로그인"/>
+                <div>
+                  <input type="checkbox"/><span>ID 저장</span>
+                </div>
+                <ul>
+                  <li><a href="">회원가입</a></li>
+                  <li><a href="">ID/비밀번호 찾기</a></li>
+                </ul>
+              </form>
+            </fieldset>
+          </div>
+          <div class="aside1">
+            <h2>커뮤니티 핫이슈</h2>
+            <ul>
+              <li><a href="">
+                <img src="../images/images1/icon_num1.png" alt="num1"/>
+                <span>길가에 멈춰선 차량 돕는 훈훈한 모습</span>
+                <img src="../images/images1/car_right1.png" alt=""/>
+              </a></li>
+              <li><a href="">
+                <img src="../images/images1/icon_num2.png" alt="num2"/>
+                <span>유리를 박살내고 차량용품 싹쓸이</span>
+                <img src="../images/images1/car_right2.png" alt=""/>
+              </a></li>
+              <li><a href="">
+                <img src="../images/images1/icon_num3.png" alt="num3"/>
+                <span>짙은안개 고속도로 살벌한 추돌사고</span>
+                <img src="../images/images1/car_right3.png" alt=""/>
+              </a></li>
+            </ul>
+            <div>
+              <img src="../images/images1/icon_leftbtn.png" alt=""/>
+              <span>1/20</span>
+              <img src="../images/images1/icon_rightbtn.png" alt=""/>
+            </div>
+          </div>
+          <div class="aside2">
+            <div>
+              <h2>자동차뉴스</h2>
+              <ul>
+                <li class="list"><a href="">
+                  <img src="../images/images1/car_right4.png" alt=""/>
+                  <span>르노삼성 부산공장<br/>중대형 핵심 기지 될 것</span>
+                </a></li>
+                <li><a href="">
+                  <img src="../images/images1/list_dot.png" alt="">
+                  <span>쌍용 EREV, 전기자동차 2015년 양산</span>
+                </a></li>
+                <li><a href="">
+                  <img src="../images/images1/list_dot.png" alt="">
+                  <span>[2012결산] 전자.자동차.철강 등</span>
+                </a></li>
+                <li><a href="">
+                  <img src="../images/images1/list_dot.png" alt="">
+                  <span>남양연구소 `T&ndash;LPDi`상용화 박차</span>
+                </a></li>
+                <li><a href="">
+                  <img src="../images/images1/list_dot.png" alt="">
+                  <span>올해들어 수입차 CEO 대거 교체</span>
+                </a></li>
+              </ul>
+              <div>
+                <span>더보기</span>
+                <img src="../images/images1/icon_more.png" alt=""/>
+              </div>
+            </div>
+          </div>
+          <div class="aside3">
+            <div class="popular">
+              <h2>커뮤니티 인기글</h2>
+              <ul>
+                <li><a href="">
+                  <img src="../images/images1/car_right5.png" alt=""/>
+                  <span>신호위반 접촉사고<br/>망설임 없이 바로 도주</span>
+                </a></li>
+                <li><a href="">
+                  <img src="../images/images1/car_right6.png" alt=""/>
+                  <span>중앙선을 넘어선 순간<br/>대형사고 간신히 모면</span>
+                </a></li>
+                <li><a href="">
+                  <img src="../images/images1/car_right7.png" alt=""/>
+                  <span>짙은 안개 고속도로<br/>살벌한 추돌사고</span>
+                </a></li>
+              </ul>
+              <div class="more">
+                <span>더보기</span>
+                <img src="../images/images1/icon_more.png" alt=""/>
+              </div>
+            </div>
+          </div>
+          <div class="aside3">
+            <div class="mycar">
+              <h2>내차소 인기순위</h2>
+              <ul>
+                <li><a href="">
+                  <img src="../images/images1/car_right8.png" alt=""/>
+                  <img src="../images/images1/icon_num1.png" alt="">
+                  <span>270ELISA 님의<br/>현대 투스카니</span>
+                </a></li>
+                <li><a href="">
+                  <img src="../images/images1/car_right9.png" alt=""/>
+                  <img src="../images/images1/icon_num2.png" alt=""/>
+                  <span>대금이 님의<br/>현대 뉴 제네시스</span>
+                </a></li>
+                <li><a href="">
+                  <img src="../images/images1/car_right10.png" alt=""/>
+                  <img src="../images/images1/icon_num3.png" alt=""/>
+                  <span>날아라콩떡 님의<br/>아우디 뉴 A6</span>
+                </a></li>
+              </ul>
+              <div class="more">
+                <span>더보기</span>
+                <img src="../images/images1/icon_more.png" alt=""/>
+              </div>
+            </div>
+          </div>
+          <div class="aside3">
+            <div class="popular">
+              <h2>보배드림 이야기</h2>
+              <div class="img">
+                <img src="../images/images1/car_right11.png" alt=""/>
+                <div class="covertext">
+                  <span>BMW1시리즈의 가성비</span>
+                  <img src="../images/images1/icon_left_right.png" alt=""/>
+                </div>
+              </div>
+              <div class="more">
+                <span>더보기</span>
+                <img src="../images/images1/icon_more.png" alt=""/>
+              </div>
+            </div>
+          </div>
+          <div class="aside4">
+            <div class="event">
+              <h2>이벤트 소식</h2>
+              <ul>
+                <li><a href="">
+                  <img src="../images/images1/car_right12.png" alt=""/>
+                  <p>맨즈박스에 참여한 브랜드 중 마음에 드는 상품을 골라주세요!</p>
+                </a></li>
+              </ul>
+              <div class="more">
+                <span>더보기</span>
+                <img src="../images/images1/icon_more.png" alt=""/>
+              </div>
+            </div>
+          </div>
+          <div class="aside5">
+            <div class="sns">
+              <h2>보배드림과 SNS 친구맺기</h2>
+              <div class="sns_list">
+                <img src="../images/images1/facebook.png" alt=""/>
+                <img src="../images/images1/tweet.png" alt=""/>
+                <img src="../images/images1/blog.png" alt=""/>
+                <img src="../images/images1/kakao.png" alt=""/>
+                <img src="../images/images1/youtube.png" alt=""/>
+                <img src="../images/images1/google+.png" alt=""/>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+      <footer>
+        <div class="footer_top">
+          <h3>공지사항</h3>
+          <ul>
+            <li><a href=""><span>보배드림 어플 업데이트 안내</span></a></li>
+          </ul>
+          <div>
+            <a href=""><span>서비스 전체보기</span></a>
+            <img src="../images/images1/icon_menu_right.png" alt="">
+          </div>
+        </div>
+        <div class="footer_menu">
+          <div>
+            <div class="sub_menu">
+              <h3>사이버매장</h3>
+              <ul>
+                <li><a href=""><span>국산차매장</span></a></li>
+                <li><a href=""><span>수입차매장</span></a></li>
+                <li><a href=""><span>튜닝카매장</span></a></li>
+                <li><a href=""><span>승용차매장</span></a></li>
+                <li><a href=""><span>스포츠카매장</span></a></li>
+                <li><a href=""><span>4륜/SUV매장</span></a></li>
+                <li><a href=""><span>벤/승합차매장</span></a></li>
+                <li><a href=""><span>오토갤러리매장</span></a></li>
+              </ul>
+            </div>
+            <div class="sub_menu">
+              <h3>국산중고차</h3>
+              <ul>
+                <li><a href=""><span>전체차량</span></a></li>
+                <li><a href=""><span>인기차량</span></a></li>
+                <li><a href=""><span>확인차량</span></a></li>
+                <li><a href=""><span>경매차량</span></a></li>
+                <li><a href=""><span>특수/특장차</span></a></li>
+                <li><a href=""><span>국산차매장</span></a></li>
+                <li><a href=""><span>중고차시세</span></a></li>
+                <li><a href=""><span>차종별검색</span></a></li>
+              </ul>
+            </div>
+            <div class="sub_menu">
+              <h3>수입중고차</h3>
+              <ul>
+                <li><a href=""><span>전체차량</span></a></li>
+                <li><a href=""><span>인기차량</span></a></li>
+                <li><a href=""><span>확인차량</span></a></li>
+                <li><a href=""><span>경매차량</span></a></li>
+                <li><a href=""><span>특수/특장차</span></a></li>
+                <li><a href=""><span>국산차매장</span></a></li>
+                <li><a href=""><span>중고차시세</span></a></li>
+                <li><a href=""><span>차종별검색</span></a></li>
+              </ul>
+            </div>
+            <div class="sub_menu">
+              <h3>내차팔기</h3>
+              <ul>
+                <li><a href=""><span>사이버매물등록</span></a></li>
+                <li><a href=""><span>국산차등록</span></a></li>
+                <li><a href=""><span>수입차등록</span></a></li>
+                <li><a href=""><span>매물등록권 구입</span></a></li>
+              </ul>
+            </div>
+            <div class="sub_menu">
+              <h3>게시판</h3>
+              <ul>
+                <li><a href=""><span>베스트글</span></a></li>
+                <li><a href=""><span>자유게시판</span></a></li>
+                <li><a href=""><span>질문과 답변</span></a></li>
+                <li><a href=""><span>시승기</span></a></li>
+                <li><a href=""><span>내차소개</span></a></li>
+                <li><a href=""><span>자동차동영상</span></a></li>
+                <li><a href=""><span>특종사진</span></a></li>
+                <li><a href=""><span>레이싱모델</span></a></li>
+              </ul>
+            </div>
+            <div class="sub_menu">
+              <h3>자료실</h3>
+              <ul>
+                <li><a href=""><span>내차소개</span></a></li>
+                <li><a href=""><span>자동차동영상</span></a></li>
+                <li><a href=""><span>특종사진</span></a></li>
+                <li><a href=""><span>레이싱모델</span></a></li>
+              </ul>
+            </div>
+            <div class="sub_menu">
+              <h3>주요서비스</h3>
+              <ul>
+                <li><a href=""><span>오토바이</span></a></li>
+                <li><a href=""><span>용품장터</span></a></li>
+                <li><a href=""><span>보배모델</span></a></li>
+                <li><a href=""><span>경매차량</span></a></li>
+                <li><a href=""><span>공매차량</span></a></li>
+                <li><a href=""><span>이벤트</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer_tel">
+          <b>이용문의</b>&nbsp;<span>02&ndash;784&ndash;2329</span>
+          <b>차량광고</b>&nbsp;<span>02&ndash;784&ndash;2329</span>
+          <b>제휴문의</b>&nbsp;<span>070&ndash;4272&ndash;0165</span>
+          <b>협력업체</b>&nbsp;<span>070&ndash;4272&ndash;0120</span>
+          <b>광고문의</b>&nbsp;<span>070&ndash;4272&ndash;0158</span>
+          <b>커뮤니티</b>&nbsp;<span>02&ndash;784&ndash;2329</span>
+          <b>신고센터</b>&nbsp;<span>장애/오류신고 &#124; 권리침해신고</span>
+        </div>
+        <div class="footer_bottom">
+          <ul>
+            <li><a href=""><span>회사소개</span></a></li>
+            <li><a href=""><span>제휴광고</span></a></li>
+            <li><a href=""><span>협력업체신청</span></a></li>
+            <li><a href=""><span>인재채용</span></a></li>
+            <li><a href=""><span>이용약관</span></a></li>
+            <li><a href=""><span>개인정보취급방침</span></a></li>
+            <li><a href=""><span>고객센터</span></a></li>
+            <li><a href=""><span>사이트맵</span></a></li>
+          </ul>
+          <div class="address">
+            <p>사업자등록번호 : 117&ndash;81&ndash;64543 통신판매업신고번호 : 제 2012&ndash;서울영등포&ndash;0697호</p>
+            <img src="" alt=""/>
+            <p>주식회사 보배네트워크 주소 : 서울 영등포구 양평동3가 16 우림E비즈센터 11,12층 대표이사 : 김보배 &#124; 개인정보관리책임자 : 김태형</p>
+            <p>대표전화 : 02&ndash;784&ndash;2329 &#124; 대표팩스 : 02&ndash;6499&ndash;2329 &#124; 이메일 : bobaedream@bobaedream.co.kr</p>
+            <p>Copyright(c) BOBAENETWORK All rights reserved</p>
+            <p>보배드림은 통신판매중개자이며 차량판매의 당사자가 아닙니다. 따라서 보배드림은 차량 거래검토 및 거래에 대하여 어떤 책임을 지지 않습니다.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+</body>
+</html>

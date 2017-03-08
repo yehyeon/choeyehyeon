@@ -1,0 +1,649 @@
+
+// 태광실업
+
+@keyframes up{
+  0%{width:23px;}
+  50%{width:13px;}
+  100%{width:23px;}
+}
+@keyframes down{
+  0%{width:13px;}
+  50%{width: 23px;}
+  100%{width: 13px;}
+}
+
+
+
+header{
+  height:80px;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  >div{
+    background-color: #ededed;
+    overflow: hidden;
+  }
+}
+
+.gnb{
+  height: 80px;
+  background-color: #000;
+  padding: 0 30px;
+  .logo{
+    float: left;
+    margin-top: 22px
+  }
+  .site-option{
+    height: 35px;
+    width: 125px;
+    float: right;
+    margin-top: 20px;
+  }
+  .menu{
+    height:80px;
+    width: 1100px;
+    margin: 0 auto;
+  }
+}
+
+.site-option{
+  font-size:0;
+  a{
+    text-align:center;
+    font-size:14px;
+    display:inline-block;
+    vertical-align:top;
+    height:35px;
+  }
+  .home{
+    width:40px;
+    text-indent:-9999px;
+    background-color:#000;
+    background-image:url(http://www.tkgroup.co.kr/kor/_Img/Layout/home-ico.png);
+    background-repeat:no-repeat;
+    background-position:center;
+    &:hover{
+      background-color:#666;
+    }
+  }
+  .lang-en{
+    width:45px;
+    line-height:35px;
+    color:#FFF;
+    background-color:#086c6d;
+    &:hover{
+      background-color: #199394;
+    }
+  }
+  .sitemap{
+    text-align:right;
+    width:40px;
+    font-size: 0;
+    span{
+      line-height:100%;
+      position:relative;
+      margin:4px;
+      top:2px;
+      display:inline-block;
+      width:25px;
+      height:2px;
+      background-color: #fff;
+    }
+    .centerLine{
+      width: 17px;
+    }
+    &:hover span:first-child{
+      animation: aniline1 1s infinite;
+    }
+    &:hover span:first-child+span{
+      animation: aniline2 1s infinite;
+    }
+    &:hover span:first-child+span+span{
+      animation: aniline1 1.5s infinite;
+    }
+  }
+}
+
+@keyframes aniline1 {
+  0% { width:32px; }
+  50% {width:22px;  }
+  100% { width:32px; }
+}
+@keyframes aniline2 {
+  0% { width:22px; }
+  80% {width:32px;  }
+  100% { width:22px; }
+}
+.menu{
+  >ul{
+    >li{
+      width:220px;
+      float:left;
+      text-align:center;
+      >a{
+        line-height:80px;
+        color:#FFF;
+        text-transform:uppercase;
+        white-space:nowrap;
+        font-family: 'Oswald', sans-serif;
+        display: block;
+        &:hover{
+          color: @color-main;
+        }
+      }
+      >div{
+        display: none;
+        background-color: #ededed;
+        >ul{
+          padding: 15px 0;
+          >li{
+            line-height:45px;
+            color: @color-black;
+            border-bottom: 0;
+            &:hover >a{
+              color: @color-main;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+    &:before{
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 220px;
+      height: 4px;
+      background-color: @color-main;
+    }
+  }
+}
+
+.intro{
+  background-color: #ccc;
+  position: relative;
+  z-index: -1;
+  overflow: hidden;
+  width: 100%;
+  transition: 1s;
+  video{
+    height: 100%;
+  }
+  .titler{
+    top:0;
+    right:0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    position: absolute;
+    text-align: center;
+    &:before{
+      content: "";
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+    }
+    img{
+      position: relative;
+      top: 100px;
+      vertical-align: middle;
+      transition: 1s;
+      margin-top: -66px;
+    }
+  }
+}
+
+.overview{
+
+  div{
+    float: left;
+    width: 33.33333%;
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: initial;
+    overflow: hidden;
+    vertical-align: top;
+    transition: 1s;
+    position: relative;
+    &:hover img{
+      transform: scale(1.5,1.5);
+    }
+    &:hover:after{
+      opacity:1;
+    }
+    &:hover:after{
+      opacity:1;
+    }
+    &:after{
+      content:"";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0,131,132,0.5);
+      opacity:0;
+      transition: 1s;
+    }
+    &:hover .text .wa .line1{
+      width: 100%;
+    }
+    &:hover .text .wa .line2{
+      height: 100%;
+    }
+    &:hover .text .wa .line3{
+      width: 100%;
+    }
+    &:hover .text .wa .line4{
+      height: 100%;
+    }
+    img{
+      width: 100%;
+      vertical-align: top;
+      transition: 1s ease-in-out;
+    }
+    .text{
+      position: absolute;
+      color: #fff;
+      font-size: 20px;
+      top:50%;
+      line-height:20px;
+      margin-top: -20px;
+      width: 100%;
+      text-align: center;
+      font-weight: 600;
+        &:before{
+          content: "";
+          width: 30px;
+          height: 3px;
+          background: #fff;
+          left: 50%;
+          display: block;
+          text-align: center;
+          margin: 0 auto;
+          transform-origin: center;
+          transition: 1s;
+        }
+      .wa{
+        display: inline-block;
+        padding: 22px 5px;
+        position: relative;
+        width: 140px;
+        .line1{
+          position: absolute;
+          height: 4px;
+          background-color: #FFF;
+          width: 0;
+          top: 0;
+          left: 0;
+          transition: 0.5s;
+          }
+          .line2{
+            position: absolute;
+            height:0;
+            background-color:#FFF;
+            width:4px;
+            top:0;
+            right:0;
+            transition: 0.5s;
+            transition-delay: 0.5s;
+          }
+          .line3{
+            position: absolute;
+            height: 4px;
+            background-color: #fff;
+            width: 0;
+            bottom:0;
+            right: 0;
+            transition: 0.5s;
+            transition-delay: 1s;
+          }
+          .line4{
+            position: absolute;
+            height: 0;
+            background-color: #fff;
+            width: 4px;
+            bottom: 0;
+            left: 0;
+            transition: 0.5s;
+            transition-delay: 1.5s;
+          }
+        }
+      }
+    }
+  }
+
+.map{
+  clear: both;
+  height: 900px;
+  background: #1d2227 url('http://www.tkgroup.co.kr/kor/_Img/Main/global-bg.jpg') repeat-x;
+  position: relative;
+  h3{
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.05em;
+    font-size: 42px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1;
+    padding-top: 100px;
+  }
+  div{
+    width: 1332px;
+    height: 574px;
+    position: absolute;
+    top: 236px;
+    left: 50%;
+    margin-left: -666px;
+    img{
+      vertical-align: middle;
+    }
+    p{
+      font-family: 'Calibri';
+      font-size: 15px;
+      color: #fff;
+      text-transform: uppercase;
+      text-align: left;
+      position: absolute;
+      line-height: 140%;
+        strong{
+          font-weight: 300;
+          font-size: 17px;
+          display: block;
+      }
+    }
+  }
+}
+
+// global
+
+.map{
+  opacity: 1;
+  .global01{
+    opacity: 1;
+  }
+  .global02{
+    animation-name: bounceInUp;
+    opacity: 1;
+    transition-delay: 0.1s;
+    .txt{
+      left: 676px;
+      top: 196px;
+      strong{
+        font-weight: 300;
+        font-size: 17px;
+        display: block;
+      }
+    }
+    .line1{
+      width: 1px;
+      height: 27px;
+      left: 613px;
+      top: 190px;
+      position: absolute;
+      background-color: #fff;
+    }
+    .line2{
+      width: 50px;
+      height: 1px;
+      left: 614px;
+      top: 216px;
+      position: absolute;
+      background-color: #fff;
+    }
+  }
+}
+
+.global03{
+  animation: bounceInUp;
+  opacity: 1;
+  transition-delay: 0.6s;
+  .txt{
+    left: 1050px;
+    top: 235px;
+    color: #ec7a00;
+    strong{
+      font-weight: 300;
+      font-size: 17px;
+      display: block;
+    }
+  }
+  .line01{
+    width: 1px;
+    height: 97px;
+    position: absolute;
+    left: 871px;
+    top: 160px;
+    background-color: #ec7a00;
+  }
+  .line02{
+    width: 166px;
+    height: 1px;
+    position: absolute;
+    left: 872px;
+    top: 256px;
+    background-color: #ec7a00;
+    }
+  }
+
+.global04{
+  animation: bounceInUp;
+  opacity: 1;
+  transition-delay: 1.2s;
+  .txt{
+    left: 408px;
+    top: 116px;
+    color: #fff;
+  }
+  .line01{
+    width: 1px;
+    height: 36px;
+    position: absolute;
+    left: 518px;
+    top: 138px;
+    background-color: #fff;
+  }
+  .line02{
+    width: 60px;
+    height: 1px;
+    position: absolute;
+    left: 519px;
+    top: 173px;
+    background-color: #fff;
+  }
+}
+
+.global05{
+  animation: bounceInUp;
+  opacity: 1;
+  transition-delay: 1.2s;
+  .txt{
+    left: 676px;
+    top: 270px;
+    color:#fff;
+  }
+  .line01{
+    width: 98px;
+    height: 1px;
+    position: absolute;
+    left: 567px;
+    top: 283px;
+    background-color: #fff;
+  }
+  .line02{
+    width: 1px;
+    height: 22px;
+    position: absolute;
+    left: 647px;
+    top: 284px;
+    background-color: #fff;
+  }
+  .line03{
+    width: 17px;
+    height: 1px;
+    position: absolute;
+    left: 648px;
+    top: 305px;
+    background-color: #fff;
+  }
+}
+
+.global06{
+  animation: bounceInUp;
+  opacity: 1;
+  transition-delay: 1.2s;
+  .txt{
+    left: 372px;
+    top: 389px;
+  }
+  .line01{
+    width: 47px;
+    height: 1px;
+    position: absolute;
+    left: 516px;
+    top: 400px;
+    background-color: #fff;
+  }
+  .line02{
+    width: 1px;
+    height: 37px;
+    position: absolute;
+    left: 563px;
+    top: 364px;
+    background-color: #fff;
+  }
+}
+
+.social{
+  width: 100%;
+  overflow: hidden;
+  h3{
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    top: -9999em;
+    left: -9999em;
+    display: block;
+    text-indent: -9999em;
+    font-size: 0px;
+    line-height: 0;
+  }
+  ul{
+    width: 100%;
+    li{
+      float: left;
+      width: 50%;
+      position: relative;
+      a{
+        outline: 1px #f00 solid;
+      .img{
+        img{
+          width: 100%;
+        }
+      }
+      .btxt{
+        position: absolute;
+        z-index: 7;
+        line-height: 22px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        height: 22px;
+        top: 50%;
+        margin-top: -11px;
+        left: 50%;
+        width: 440px;
+        margin-left: -220px;
+        font-weight: 600;
+        color: #fff;
+        font-size: 25px;
+        text-align: center;
+      }
+      .stxt{
+        position: absolute;
+        z-index: 7;
+        font-family: "Malgun Gothic";
+        line-height: 20px;
+        letter-spacing: 0;
+        text-transform: uppercase;
+        height: 20px;
+        top: 60%;
+        margin-top: -11px;
+        left: 50%;
+        width: 440px;
+        margin-left: -220px;
+        font-weight: 300;
+        color: #fff;
+        font-size: 20px;
+        text-align: center;
+      }
+      &:after{
+        transform: scale(1.5,1.5);
+        background: rgba(0,131,132,0.5);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+        display: block;
+        content: "";
+        opacity: 0;
+        margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:1000px) {
+  html{
+    overflow-x: hidden;
+  }
+  header{
+    position:static;
+    >div{
+      overflow:visible;
+    }
+    .gnb{
+      .menu{
+        z-index: 1;
+        position:absolute;
+        right:0;
+        width:223px;
+        background-color:#FFF;
+        >ul{
+          >li{
+            background-color:#FFF;
+            text-align: left;
+            >a{
+              color:#000;
+              line-height:68px;
+            }
+            div{
+              padding: 0;
+            }
+            &:hover div{
+              display: block;
+            }
+            li{
+              background-color: #eee;
+              border-top:1px #ccc solid;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:800px) {
+  .intro{
+    height: 500px;
+    .titler{
+      img{
+        margin-top: 70px;
+      }
+    }
+  }
+}
