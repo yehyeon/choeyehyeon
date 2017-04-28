@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.gnb {
+  border: 11px #f00 solid;
+}
+.gnb li {
+  border: 1px #f00 solid;
+}
+.gnb li:first-child {
+  border: 1px #00ff00 solid;
+}
+.gnb a {
+  text-decoration: none;
+  color: #000;
+}
+.gnb a:hover {
+  color: red;
+}

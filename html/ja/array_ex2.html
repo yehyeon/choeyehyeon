@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ex2</title>
+<script type="text/javascript">
+    var user = prompt("오늘의 생과일 음료는?");
+    console.log(user);
+
+    var text1 = ['딸기','오렌지','파인애플','참외','바나나'];
+    var text2 = ['딸기','오렌지','파인애플','참외','바나나'];
+    var text3 = ['딸기','오렌지','파인애플','참외','바나나'];
+
+    var ran = Math.random()*text1.length;
+    var num1 = Math.floor(ran);
+    var num2 = Math.floor(Math.random()*text2.length);
+    var num3 = Math.floor(Math.random()*text3.length);
+
+    document.write(text1[num1]+text2[num2]+text3[num3]);
+
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

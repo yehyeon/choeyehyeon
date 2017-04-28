@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ZDnet</title>
+<style>
+img, fieldset{border: 0;}
+ul, ol{list-style: none;}
+em, address{font-style: normal;}
+a{text-decoration: none; color: #000;}
+*{padding: 0; margin:0;}
+img, video{vertical-align: top;}
+.fr{float: right;}
+.fl{float:left;}
+.b{font-weight:bold;}
+.red{color: #F00 solid;}
+
+.wrap{width: 900px;
+      height: 540px;
+      border: 1px #F00 solid;
+      margin: 0 auto;}
+.header{height:110px; width:840px; padding: 0 30px; position: relative;margin-bottom: 10px;}
+.header:after{
+    content:"";
+    width: 840px;
+    height: 2px;
+    display: inline-block;
+    background-color: #545454;
+    position: absolute;
+    bottom: 0;
+}
+.logo{width: 260px; height: 55px;margin:10px 0 15px 0;}
+.ad{width: 468px; height: 60px; margin-top: 40px;}
+.ad img{width: 100%; height: 100%;}
+.btn{clear:left;}
+.btn a{border: 1px #CCC solid; border-radius: 3px; display:inline-block; width: 66px; height: 22px;font-size: 10px; text-align:center; line-height: 22px;}
+.bookmark{background-color: #60544a; color:#FFF;}
+.btn em{font-size: 9px;}
+
+.section{width: 840px;height: 418px; margin: 0 auto;}
+.left-section{width: 585px; height: 100%;}
+.left-section .ls-left{width:430px; height:100%;}
+.ls-left .lsl-top{width: 420px; height:235px;}
+.lsl-top h3{padding-bottom: 10px;font-size: 18px;}
+.lsl-top img{float: left; width: 128px; height: 102px;}
+.lsl-top .lslt_t{width:100%; height:140px;}
+.lsl-top .lslt_t li{margin: 0 0 3px 138px; padding-left: 10px;  font-size:12px;}
+.lslt_t li:before{
+    content:"";
+    width: 10px; height: 10px;
+    display: inline-block;
+    background-image: url('../images/zd/011.gif');
+    background-repeat: no-repeat;
+}
+.lsl-top .lslt_t p{margin: 0 0 3px 138px; font-size: 14px;}
+
+.lsl-top .lslt_b{width: 100%; height: 68px; margin-top: 5px;}
+.lsl-top .lslt_b li{width:200px; height: 100%; float:left; margin-top: 10px;}
+.lsl-top .lslt_b img{width: 88px; height: 65px; float: left;margin-right: 5px;}
+.lsl-top .lslt_b a{font-size: 12px; font-weight: bold;}
+.ls-left .lsl-bot{width:420px; height: 176px;}
+.lsl-bot{background-color: #eeeeee;padding-top: 5px; border-top:1px #bdc6da solid;}
+.lsl-bot li{margin: 10px 0 10px 20px; font-weight:20px;
+           padding-left: 10px;font-weight: bold;}
+
+.left-section .ls-right{margin-left: 440px; height: 100%;}
+.ls-right img{width: 147px; height: 101px;}
+.ls-right a{width: 181px; height: 25px; font-size:12px; margin-bottom: 10px;display: inline-block; white-space: nowrap;}
+
+.right-section{margin: 10px 0 10px 605px; height: 100%;}
+.rs-top{width:234px; height: 90px;}
+.rs-top li{background-image: url('../images/zd/014.gif');
+          background-repeat: no-repeat; background-position: -3px 10px;}
+.rs-top a{font-size: 12px; padding-left: 10px; display: inline-block; font-weight: bold;}
+.rs-mid{width: 235px; height:136px; margin-bottom: 10px;}
+.rs-mid h3{
+    background-image:url('../images/zd/007.jpg');
+    height: 20px;
+    width: 235px;
+    margin: 10px 0;
+}
+.rs-mid li{font-size: 12px; padding-left: 17px; margin-bottom: 5px;}
+.rs-mid span{margin-left: 3px;}
+.list1{background-image: url('../images/zd/015.gif');
+      background-repeat: no-repeat;
+      background-position: 0 2px;}
+.list2{background-image: url('../images/zd/016.gif');
+      background-repeat: no-repeat;
+      background-position: 0 2px;}
+.list3{background-image: url('../images/zd/017.gif');
+      background-repeat: no-repeat;
+      background-position: 0 2px;}
+.list4{background-image: url('../images/zd/018.gif');
+      background-repeat: no-repeat;
+      background-position: 0 2px;}
+.list5{background-image: url('../images/zd/019.gif');
+      background-repeat: no-repeat;
+      background-position: 0 2px;}
+.rs-bot li{float:left; position:relative;}
+.rs-bot img{width: 113px; height: 91px; margin: 0 3px 10px 0;}
+.rs-bot span{display:block; width:110px; font-size:12px;}
+.rs-bot li:before{
+    content:"";
+    background-image: url('../images/zd/009.png');
+    width: 36px; height: 20px;
+    position: absolute;
+    left:0;
+    top:0;
+}
+.rs-bot a{text-align: center;}
+</style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div class="logo fl">
+              <img src="http://static.naver.net/newsstand/up/2013/0813/nsd11491303.gif" alt="">
+            </div>
+            <div class="ad fr">
+              <img src="http://adcreative.naver.com/ad3/1004/1004874/468_60_21489126952876.jpg" alt="">
+            </div>
+            <div class="btn">
+                <a href="" class="bookmark">구독하기</a>
+                <a href="" class="user">이용자한마디</a>
+                <a href="" class="social">소셜보내기</a>
+                <em>03-13 15:01<span>편집</span></em>
+            </div>
+        </div>
+        <div class="section">
+           <div class="left-section fl">
+               <div class="ls-left fl">
+                   <div class="lsl-top">
+                       <div class="lslt_t">
+                          <h3>[르포]'LG G6'출시 첫 주말 '긍정 시그널'</h3>
+                          <img src="http://static.naver.net/newsstand/2017/0313/ZDNetKorea/161955/001.jpg" alt="">
+                          <p>"커진 화면, 고화소 광각 카메라, 좋은 음질에 대한 소비자들 반응이 괜찮습니다. 매장에 와서 제품을 사용해보신 분들은 전작 G5의 모듈형 디자인과 달리"</p>
+                           <ul>
+                               <li><a href="">조준호 LG전자 "G6, 차별화보다 기..."</a></li>
+                               <li><a href="">LG페이, 삼수 끝에 6월에 본격 출격</a></li>
+                           </ul>
+                       </div>
+                       <div class="lslt_b">
+                           <ul>
+                               <li><img src="http://static.naver.net/newsstand/2017/0313/ZDNetKorea/161955/002.jpg" alt="">
+                                   <a href=""><span>www탄생 28주년..."웹, 위협받고 있다"</span></a>
+                               </li>
+                               <li><img src="../images/zd/003.jpg" alt>
+                                   <a href=""><span>"독일 4차산업혁명, 핵심은 사람이다"</span></a>
+                               </li>
+                           </ul>
+                       </div>
+                   </div>
+                   <div class="lsl-bot">
+                     <ul>
+                         <li><a href="">스마트폰 암호,'열화상 카메라'로 보인다</a></li>
+                         <li><a href="">가짜 안드로이드 백신 판별법</a></li>
+                         <li><a href="">225년 영금융사는 왜 AI-블록체인에 눈독 들일까</a></li>
+                         <li><a href="">일 정부 "한국, IoT분야 경쟁력 세계 4위"</a></li>
+                         <li><a href="">중 넥스트EV "2020년 미국에 완전 자율차 출시"</a></li>
+                     </ul>
+                   </div>
+               </div>
+               <div class="ls-right">
+                   <ul>
+                       <li>
+                           <img src="../images/zd/004.jpg" alt="">
+                           <a href="">주인 알아보는 AI알람시계</a>
+                       </li>
+                       <li>
+                           <img src="../images/zd/005.jpg" alt="">
+                           <a href="">만두처럼 생긴 토성의 달</a>
+                       </li>
+                       <li>
+                           <img src="../images/zd/006.jpg" alt="">
+                           <a href="">기아차, '쏘렌토 가솔린 2.0E'</a>
+                       </li>
+                   </ul>
+               </div>
+           </div>
+           <div class="right-section">
+               <div class="rs-top">
+                   <ul>
+                       <li class="red"><a href="">"악성코드 선탑재 안드로이드 기기 3..."</a></li>
+                       <li><a href="">'오픈 임박' 테슬라 하남, 완속 충전기...</a></li>
+                       <li><a href="">박근혜 전 대통령 탄핵 날 '치킨' 주문...</a></li>
+                       <li><a href="">올 봄 노트북 트렌드는 '배터리'</a></li>
+                   </ul>
+               </div>
+               <div class="rs-mid">
+                   <h3></h3>
+                   <ul>
+                       <li class="list1 red"><a href=""><span>스마트폰 암호, '열화상 카메라'로 보인</span></a></li>
+                       <li class="list2"><a href=""><span>[르포]'LG G6'출시 첫 주말 '긍정 시..'</span></a></li>
+                       <li class="list3"><a href=""><span>일 정부 '한국, IoT분야 경쟁력 세계 4위'</span></a></li>
+                       <li class="list4"><a href=""><span>"독일 4차 산업혁명, 핵심은 사람이다"</span></a></li>
+                       <li class="list5"><a href=""><span>가짜 안드로이드 백신 판별법</span></a></li>
+                   </ul>
+               </div>
+               <div class="rs-bot">
+                   <ul>
+                       <li>
+                           <img src="../images/zd/008.jpg" alt="">
+                           <a href=""><span>4차산업혁명...세계는 왜 독일을 주목할</span></a>
+                       </li>
+                       <li>
+                           <img src="../images/zd/010.jpg" alt="">
+                           <a href=""><span>산업용 3D 프린터, 어디에 어떻게</span></a>
+                       </li>
+                   </ul>
+
+               </div>
+           </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>주사위 던지기</title>
+        <script type="application/javascript">
+            //canvas의 너비와 높이 지정
+            var cwidth=400;
+            var cheight=300;
+
+            //주사위 1개의 가로 ,세로 위치
+            var dicex=50;
+            var dicey=50;
+
+            //주사위 면의 너비와 높이 지정
+            var dicewidth=100;
+            var diceheight=100;
+
+            //점의 반경
+            var dotrad=6;
+
+            var ctx;
+
+            //가로 위치를 저장하고 두 주사위 면 각각에 대해 바뀔 변수
+            var dx;
+            //세로 위치 저장에 사용할 변수.
+            var dy;
+
+            var firstturn = true;
+            var point;
+
+            function throwdice(){
+                //랜덤 값 할 당
+                var sum;  //두 주사위 합이 저장될 변수
+                var ch=1+Math.floor(Math.random()*6);
+
+                sum=ch;
+                dx=dicex;
+                dy=dicey;
+
+                drawface(ch);
+
+                dx=dicex+150;
+                ch=1+Math.floor(Math.random()*6);
+
+                sum+=ch;
+                drawface(ch);
+
+                //첫 번째 던지기 인지 여부
+                if(firstturn){
+                    switch(sum){
+                        case 7:  // 7, 11 점 일때
+                        case 11:
+                        document.f.outcome.value = "이겼습니다.!!";
+                        break;
+                        case 2: // sum 2, 3, 12 점 일때
+                        case 3:
+                        case 12:
+                        document.f.outcom.value = "졌습니다.!";
+                        break;
+                        default:   // sum 값이 그 외인경우
+                            point=sum;
+                            document.f.pv.value=point;
+                            firstturn=false;
+                            document.f.stage.value = "다시 던지세요.";
+                            document.f.outcome.value = "  ";
+                    }
+                }
+                else{
+                    switch(sum){
+                        case point :
+                            document.f.outcome.value = "이겼습니다.!";
+                            document.f.stage.value = "새로 시작.";
+                            document.f.pv.value = "   ";
+                            firstturn=true;
+                            break;
+                        case 7:
+                            document.f.outcome.value = "졌습니다.!";
+                            document.f.stage.value = "새로 시작.";
+                            document.f.pv.value = "   ";
+                            firstturn=true;
+                    }
+                }
+            }
+
+            function drawface(n){
+                ctx=document.getElementById('canvas').getContext('2d');
+                ctx.lineWidth=5;
+                ctx.clearRect(dx, dy, dicewidth, diceheight); //주사위 면의 그리기 영역 지움
+                ctx.strokeRect(dx, dy, dicewidth, diceheight); // 주사위 면의 윤곽선 그리기
+
+                var dotx;
+                var doty;
+
+                ctx.fillStyle="#009966"; //색상지정
+                switch(n){
+                    case 1:  // 점 1 개
+                        draw1();
+                        break;
+                    case 2: // 점 2개
+                        draw2();
+                        break;
+                    case 3: //점 3 개
+                        draw2();
+                        draw1();
+                        break;
+                    case 4:  // 점 4개
+                        draw4();
+                        break;
+                    case 5:  // 점 5개
+                        draw4();
+                        draw1();
+                        break;
+                    case 6:  // 점 6개
+                        draw4();
+                        draw2mid();
+                        break;
+                   }
+            }
+            function draw1(){
+                var dotx;
+                var doty;
+
+                ctx.beginPath(); //패스시작
+                dotx = dx + 0.5 * dicewidth; //dx로 이 점의 중심을 주사위 면의 중앙에 수평으로 일치되게 지정
+                doty = dy + 0.5 * diceheight; //수직으로 일치되게
+
+                ctx.arc(dotx, doty, dotrad, 0, Math.PI*2, true); // 원 생성
+                ctx.closePath();
+                ctx.fill();
+            }
+            function draw2(){
+                var dotx;
+                var doty;
+
+                ctx.beginPath(); //패스시작
+                dotx = dx+3*dotrad; //dx로 이 점의 중심을 주사위 면의 중앙에 수평으로 일치되게 지정
+                doty = dy+3*dotrad; //수직으로 일치되게
+
+                ctx.arc(dotx, doty, dotrad, 0, Math.PI*2, true); // 첫 번째 점 생성
+
+                dotx = dx+dicewidth-3*dotrad;  //  수평으로 3배가 되는 지점에 일치되게 지정
+                doty = dy+diceheight-3*dotrad; //  수직으로 3배가 되는 지점에 일치되게 지정
+
+                ctx.arc(dotx, doty, dotrad, 0, Math.PI*2, true); // 두번째 점 생성
+                ctx.closePath();
+                ctx.fill();
+            }
+            function draw4(){
+                var dotx;
+                var doty;
+
+                ctx.beginPath(); //패스시작
+                dotx = dx + 3 * dotrad; //dx로 이 점의 중심을 주사위 면의 중앙에 수평으로 일치되게 지정
+                doty = dy + 3 * dotrad; //수직으로 일치되게
+
+                ctx.arc(dotx, doty, dotrad, 0, Math.PI*2, true); // 첫 번째 점 생성
+
+                dotx = dx+dicewidth-3*dotrad;  //  수평으로 3배가 되는 지점에 일치되게 지정
+                doty = dy+diceheight-3*dotrad; //  수직으로 3배가 되는 지점에 일치되게 지정
+
+                ctx.arc(dotx, doty, dotrad, 0, Math.PI*2, true); // 두번째 점 생성
+                ctx.closePath();
+                ctx.fill();
+
+                ctx.beginPath();
+                dotx=dx+3*dotrad;
+                doty=dy+diceheight-3*dotrad;
+                ctx.arc(dotx, doty, dotrad, 0, Math.PI*2, true);
+                dotx=dx+dicewidth-3*dotrad;
+                doty=dy+3*dotrad;
+                ctx.arc(dotx, doty, dotrad, 0, Math.PI*2, true);
+                ctx.closePath();
+                ctx.fill();
+            }
+
+            function draw2mid(){
+                var dotx;
+                var doty;
+                ctx.beginPath();
+                dotx = dx+3*dotrad;     //수평으로 안에 배치
+                doty = dy+0.5*diceheight;  // 수직으로 중앙에 배치
+                ctx.arc(dotx, doty, dotrad, 0, Math.PI*2, true);  // 원생성
+                dotx = dx+dicewidth-3*dotrad; //오른쪽 테두리 안쪽에 배치
+                doty = dy+0.5*diceheight;     //중앙에  수직으로 배치
+                ctx.arc(dotx, doty, dotrad, 0, Math.PI*2, true);  //원  생성
+                ctx.closePath();
+                ctx.fill();
+            }
+        </script>
+    </head>
+    <body>
+        <canvas id="canvas" width="400" height="300">
+            이 브라우저는 HTML5의 canvas요소를 지원하지 않습니다.
+        </canvas>
+        <br/>
+        <button onClick="throwdice();"> 주사위 던지기 </button>
+        <form name="f">
+            판 : <input name="stage" value="첫 번째 던지기"/>
+            포인트 : <input name="pv" value="    "/>
+            결과 : <input name="outcome" value="    "/>
+        </form>
+    </body>
